@@ -1,0 +1,1295 @@
+ ****** PrimeSim HSPICE -- T-2022.06 linux64 (May 20 2022 7637141) ******
+  Copyright (c) 1986 - 2024 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: reduced_6TSRAM.sp                                                 
+  Command line options: /usr/caen/hspice-2022.06/hspice/linux64/hspice -i reduced_6TSRAM.sp -o reduced_6TSRAM.lis
+  Start time: Thu Dec  5 23:30:43 2024
+ lic:  
+ lic: FLEXlm: SDK_12.10 
+ lic: USER:   mengshan             HOSTNAME: caen-vnc-mi02.engin.umich.edu 
+ lic: HOSTID: ffffffffd38d6204     PID:      2692644 
+ lic: Using FLEXlm license file: 
+ lic: /usr/caen/FLEXlm/data/license.dat.synopsys 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 30-apr-2025/2024.09 
+ lic: 1(in_use)/150(total) FLOATING license(s) on SERVER /usr/caen/FLEXlm/data/license.dat.synopsys 
+ lic:   
+1****** PrimeSim HSPICE -- T-2022.06 linux64 (May 20 2022 7637141) ******
+ ******  
+ 
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x_sub_cim0.                     sub_cim            1.00 
+        2 x_sub_cim1.                     sub_cim            1.00 
+        3 x_sub_cim2.                     sub_cim            1.00 
+        4 x_sub_cim3.                     sub_cim            1.00 
+        5 x_sub_cim0.x_buff0.             buffer             1.00 
+        6 x_sub_cim0.x_buff1.             buffer             1.00 
+        7 x_sub_cim0.x_buff2.             buffer             1.00 
+        8 x_sub_cim0.x_buff3.             buffer             1.00 
+        9 x_sub_cim0.x_buff4.             buffer             1.00 
+       10 x_sub_cim0.x_buff5.             buffer             1.00 
+       11 x_sub_cim0.x_buff6.             buffer             1.00 
+       12 x_sub_cim0.x_buff7.             buffer             1.00 
+       13 x_sub_cim0.x_pre0.              precharge          1.00 
+       14 x_sub_cim0.x_pre1.              precharge          1.00 
+       15 x_sub_cim0.x_pre2.              precharge          1.00 
+       16 x_sub_cim0.x_pre3.              precharge          1.00 
+       17 x_sub_cim0.x_pre4.              precharge          1.00 
+       18 x_sub_cim0.x_pre5.              precharge          1.00 
+       19 x_sub_cim0.x_pre6.              precharge          1.00 
+       20 x_sub_cim0.x_pre7.              precharge          1.00 
+       21 x_sub_cim0.x_ram00.             cell               1.00 
+       22 x_sub_cim0.x_ram01.             cell               1.00 
+       23 x_sub_cim0.x_ram02.             cell               1.00 
+       24 x_sub_cim0.x_ram03.             cell               1.00 
+       25 x_sub_cim0.x_ram04.             cell               1.00 
+       26 x_sub_cim0.x_ram05.             cell               1.00 
+       27 x_sub_cim0.x_ram06.             cell               1.00 
+       28 x_sub_cim0.x_ram07.             cell               1.00 
+       29 x_sub_cim0.x_ram10.             cell               1.00 
+       30 x_sub_cim0.x_ram11.             cell               1.00 
+       31 x_sub_cim0.x_ram12.             cell               1.00 
+       32 x_sub_cim0.x_ram13.             cell               1.00 
+       33 x_sub_cim0.x_ram14.             cell               1.00 
+       34 x_sub_cim0.x_ram15.             cell               1.00 
+       35 x_sub_cim0.x_ram16.             cell               1.00 
+       36 x_sub_cim0.x_ram17.             cell               1.00 
+       37 x_sub_cim0.x_ram20.             cell               1.00 
+       38 x_sub_cim0.x_ram21.             cell               1.00 
+       39 x_sub_cim0.x_ram22.             cell               1.00 
+       40 x_sub_cim0.x_ram23.             cell               1.00 
+       41 x_sub_cim0.x_ram24.             cell               1.00 
+       42 x_sub_cim0.x_ram25.             cell               1.00 
+       43 x_sub_cim0.x_ram26.             cell               1.00 
+       44 x_sub_cim0.x_ram27.             cell               1.00 
+       45 x_sub_cim0.x_ram30.             cell               1.00 
+       46 x_sub_cim0.x_ram31.             cell               1.00 
+       47 x_sub_cim0.x_ram32.             cell               1.00 
+       48 x_sub_cim0.x_ram33.             cell               1.00 
+       49 x_sub_cim0.x_ram34.             cell               1.00 
+       50 x_sub_cim0.x_ram35.             cell               1.00 
+       51 x_sub_cim0.x_ram36.             cell               1.00 
+       52 x_sub_cim0.x_ram37.             cell               1.00 
+       53 x_sub_cim0.x_buff_nor00.        inv_buf            1.00 
+       54 x_sub_cim0.x_buff_nor01.        inv_buf            1.00 
+       55 x_sub_cim0.x_buff_nor02.        inv_buf            1.00 
+       56 x_sub_cim0.x_buff_nor03.        inv_buf            1.00 
+       57 x_sub_cim0.x_buff_nor04.        inv_buf            1.00 
+       58 x_sub_cim0.x_buff_nor05.        inv_buf            1.00 
+       59 x_sub_cim0.x_buff_nor06.        inv_buf            1.00 
+       60 x_sub_cim0.x_buff_nor07.        inv_buf            1.00 
+       61 x_sub_cim0.x_buff_nor10.        inv_buf            1.00 
+       62 x_sub_cim0.x_buff_nor11.        inv_buf            1.00 
+       63 x_sub_cim0.x_buff_nor12.        inv_buf            1.00 
+       64 x_sub_cim0.x_buff_nor13.        inv_buf            1.00 
+       65 x_sub_cim0.x_buff_nor14.        inv_buf            1.00 
+       66 x_sub_cim0.x_buff_nor15.        inv_buf            1.00 
+       67 x_sub_cim0.x_buff_nor16.        inv_buf            1.00 
+       68 x_sub_cim0.x_buff_nor17.        inv_buf            1.00 
+       69 x_sub_cim0.x_buff_nor20.        inv_buf            1.00 
+       70 x_sub_cim0.x_buff_nor21.        inv_buf            1.00 
+       71 x_sub_cim0.x_buff_nor22.        inv_buf            1.00 
+       72 x_sub_cim0.x_buff_nor23.        inv_buf            1.00 
+       73 x_sub_cim0.x_buff_nor24.        inv_buf            1.00 
+       74 x_sub_cim0.x_buff_nor25.        inv_buf            1.00 
+       75 x_sub_cim0.x_buff_nor26.        inv_buf            1.00 
+       76 x_sub_cim0.x_buff_nor27.        inv_buf            1.00 
+       77 x_sub_cim0.x_buff_nor30.        inv_buf            1.00 
+       78 x_sub_cim0.x_buff_nor31.        inv_buf            1.00 
+       79 x_sub_cim0.x_buff_nor32.        inv_buf            1.00 
+       80 x_sub_cim0.x_buff_nor33.        inv_buf            1.00 
+       81 x_sub_cim0.x_buff_nor34.        inv_buf            1.00 
+       82 x_sub_cim0.x_buff_nor35.        inv_buf            1.00 
+       83 x_sub_cim0.x_buff_nor36.        inv_buf            1.00 
+       84 x_sub_cim0.x_buff_nor37.        inv_buf            1.00 
+       85 x_sub_cim0.x_nor00.             nor                1.00 
+       86 x_sub_cim0.x_nor01.             nor                1.00 
+       87 x_sub_cim0.x_nor02.             nor                1.00 
+       88 x_sub_cim0.x_nor03.             nor                1.00 
+       89 x_sub_cim0.x_nor04.             nor                1.00 
+       90 x_sub_cim0.x_nor05.             nor                1.00 
+       91 x_sub_cim0.x_nor06.             nor                1.00 
+       92 x_sub_cim0.x_nor07.             nor                1.00 
+       93 x_sub_cim0.x_nor10.             nor                1.00 
+       94 x_sub_cim0.x_nor11.             nor                1.00 
+       95 x_sub_cim0.x_nor12.             nor                1.00 
+       96 x_sub_cim0.x_nor13.             nor                1.00 
+       97 x_sub_cim0.x_nor14.             nor                1.00 
+       98 x_sub_cim0.x_nor15.             nor                1.00 
+       99 x_sub_cim0.x_nor16.             nor                1.00 
+      100 x_sub_cim0.x_nor17.             nor                1.00 
+      101 x_sub_cim0.x_nor20.             nor                1.00 
+      102 x_sub_cim0.x_nor21.             nor                1.00 
+      103 x_sub_cim0.x_nor22.             nor                1.00 
+      104 x_sub_cim0.x_nor23.             nor                1.00 
+      105 x_sub_cim0.x_nor24.             nor                1.00 
+      106 x_sub_cim0.x_nor25.             nor                1.00 
+      107 x_sub_cim0.x_nor26.             nor                1.00 
+      108 x_sub_cim0.x_nor27.             nor                1.00 
+      109 x_sub_cim0.x_nor30.             nor                1.00 
+      110 x_sub_cim0.x_nor31.             nor                1.00 
+      111 x_sub_cim0.x_nor32.             nor                1.00 
+      112 x_sub_cim0.x_nor33.             nor                1.00 
+      113 x_sub_cim0.x_nor34.             nor                1.00 
+      114 x_sub_cim0.x_nor35.             nor                1.00 
+      115 x_sub_cim0.x_nor36.             nor                1.00 
+      116 x_sub_cim0.x_nor37.             nor                1.00 
+      117 x_sub_cim0.x_write0.            write              1.00 
+      118 x_sub_cim0.x_write1.            write              1.00 
+      119 x_sub_cim0.x_write2.            write              1.00 
+      120 x_sub_cim0.x_write3.            write              1.00 
+      121 x_sub_cim0.x_write4.            write              1.00 
+      122 x_sub_cim0.x_write5.            write              1.00 
+      123 x_sub_cim0.x_write6.            write              1.00 
+      124 x_sub_cim0.x_write7.            write              1.00 
+      125 x_sub_cim0.x_sa0.               sa                 1.00 
+      126 x_sub_cim0.x_sa1.               sa                 1.00 
+      127 x_sub_cim0.x_sa2.               sa                 1.00 
+      128 x_sub_cim0.x_sa3.               sa                 1.00 
+      129 x_sub_cim0.x_sa4.               sa                 1.00 
+      130 x_sub_cim0.x_sa5.               sa                 1.00 
+      131 x_sub_cim0.x_sa6.               sa                 1.00 
+      132 x_sub_cim0.x_sa7.               sa                 1.00 
+      133 x_sub_cim1.x_buff0.             buffer             1.00 
+      134 x_sub_cim1.x_buff1.             buffer             1.00 
+      135 x_sub_cim1.x_buff2.             buffer             1.00 
+      136 x_sub_cim1.x_buff3.             buffer             1.00 
+      137 x_sub_cim1.x_buff4.             buffer             1.00 
+      138 x_sub_cim1.x_buff5.             buffer             1.00 
+      139 x_sub_cim1.x_buff6.             buffer             1.00 
+      140 x_sub_cim1.x_buff7.             buffer             1.00 
+      141 x_sub_cim1.x_pre0.              precharge          1.00 
+      142 x_sub_cim1.x_pre1.              precharge          1.00 
+      143 x_sub_cim1.x_pre2.              precharge          1.00 
+      144 x_sub_cim1.x_pre3.              precharge          1.00 
+      145 x_sub_cim1.x_pre4.              precharge          1.00 
+      146 x_sub_cim1.x_pre5.              precharge          1.00 
+      147 x_sub_cim1.x_pre6.              precharge          1.00 
+      148 x_sub_cim1.x_pre7.              precharge          1.00 
+      149 x_sub_cim1.x_ram00.             cell               1.00 
+      150 x_sub_cim1.x_ram01.             cell               1.00 
+      151 x_sub_cim1.x_ram02.             cell               1.00 
+      152 x_sub_cim1.x_ram03.             cell               1.00 
+      153 x_sub_cim1.x_ram04.             cell               1.00 
+      154 x_sub_cim1.x_ram05.             cell               1.00 
+      155 x_sub_cim1.x_ram06.             cell               1.00 
+      156 x_sub_cim1.x_ram07.             cell               1.00 
+      157 x_sub_cim1.x_ram10.             cell               1.00 
+      158 x_sub_cim1.x_ram11.             cell               1.00 
+      159 x_sub_cim1.x_ram12.             cell               1.00 
+      160 x_sub_cim1.x_ram13.             cell               1.00 
+      161 x_sub_cim1.x_ram14.             cell               1.00 
+      162 x_sub_cim1.x_ram15.             cell               1.00 
+      163 x_sub_cim1.x_ram16.             cell               1.00 
+      164 x_sub_cim1.x_ram17.             cell               1.00 
+      165 x_sub_cim1.x_ram20.             cell               1.00 
+      166 x_sub_cim1.x_ram21.             cell               1.00 
+      167 x_sub_cim1.x_ram22.             cell               1.00 
+      168 x_sub_cim1.x_ram23.             cell               1.00 
+      169 x_sub_cim1.x_ram24.             cell               1.00 
+      170 x_sub_cim1.x_ram25.             cell               1.00 
+      171 x_sub_cim1.x_ram26.             cell               1.00 
+      172 x_sub_cim1.x_ram27.             cell               1.00 
+      173 x_sub_cim1.x_ram30.             cell               1.00 
+      174 x_sub_cim1.x_ram31.             cell               1.00 
+      175 x_sub_cim1.x_ram32.             cell               1.00 
+      176 x_sub_cim1.x_ram33.             cell               1.00 
+      177 x_sub_cim1.x_ram34.             cell               1.00 
+      178 x_sub_cim1.x_ram35.             cell               1.00 
+      179 x_sub_cim1.x_ram36.             cell               1.00 
+      180 x_sub_cim1.x_ram37.             cell               1.00 
+      181 x_sub_cim1.x_buff_nor00.        inv_buf            1.00 
+      182 x_sub_cim1.x_buff_nor01.        inv_buf            1.00 
+      183 x_sub_cim1.x_buff_nor02.        inv_buf            1.00 
+      184 x_sub_cim1.x_buff_nor03.        inv_buf            1.00 
+      185 x_sub_cim1.x_buff_nor04.        inv_buf            1.00 
+      186 x_sub_cim1.x_buff_nor05.        inv_buf            1.00 
+      187 x_sub_cim1.x_buff_nor06.        inv_buf            1.00 
+      188 x_sub_cim1.x_buff_nor07.        inv_buf            1.00 
+      189 x_sub_cim1.x_buff_nor10.        inv_buf            1.00 
+      190 x_sub_cim1.x_buff_nor11.        inv_buf            1.00 
+      191 x_sub_cim1.x_buff_nor12.        inv_buf            1.00 
+      192 x_sub_cim1.x_buff_nor13.        inv_buf            1.00 
+      193 x_sub_cim1.x_buff_nor14.        inv_buf            1.00 
+      194 x_sub_cim1.x_buff_nor15.        inv_buf            1.00 
+      195 x_sub_cim1.x_buff_nor16.        inv_buf            1.00 
+      196 x_sub_cim1.x_buff_nor17.        inv_buf            1.00 
+      197 x_sub_cim1.x_buff_nor20.        inv_buf            1.00 
+      198 x_sub_cim1.x_buff_nor21.        inv_buf            1.00 
+      199 x_sub_cim1.x_buff_nor22.        inv_buf            1.00 
+      200 x_sub_cim1.x_buff_nor23.        inv_buf            1.00 
+      201 x_sub_cim1.x_buff_nor24.        inv_buf            1.00 
+      202 x_sub_cim1.x_buff_nor25.        inv_buf            1.00 
+      203 x_sub_cim1.x_buff_nor26.        inv_buf            1.00 
+      204 x_sub_cim1.x_buff_nor27.        inv_buf            1.00 
+      205 x_sub_cim1.x_buff_nor30.        inv_buf            1.00 
+      206 x_sub_cim1.x_buff_nor31.        inv_buf            1.00 
+      207 x_sub_cim1.x_buff_nor32.        inv_buf            1.00 
+      208 x_sub_cim1.x_buff_nor33.        inv_buf            1.00 
+      209 x_sub_cim1.x_buff_nor34.        inv_buf            1.00 
+      210 x_sub_cim1.x_buff_nor35.        inv_buf            1.00 
+      211 x_sub_cim1.x_buff_nor36.        inv_buf            1.00 
+      212 x_sub_cim1.x_buff_nor37.        inv_buf            1.00 
+      213 x_sub_cim1.x_nor00.             nor                1.00 
+      214 x_sub_cim1.x_nor01.             nor                1.00 
+      215 x_sub_cim1.x_nor02.             nor                1.00 
+      216 x_sub_cim1.x_nor03.             nor                1.00 
+      217 x_sub_cim1.x_nor04.             nor                1.00 
+      218 x_sub_cim1.x_nor05.             nor                1.00 
+      219 x_sub_cim1.x_nor06.             nor                1.00 
+      220 x_sub_cim1.x_nor07.             nor                1.00 
+      221 x_sub_cim1.x_nor10.             nor                1.00 
+      222 x_sub_cim1.x_nor11.             nor                1.00 
+      223 x_sub_cim1.x_nor12.             nor                1.00 
+      224 x_sub_cim1.x_nor13.             nor                1.00 
+      225 x_sub_cim1.x_nor14.             nor                1.00 
+      226 x_sub_cim1.x_nor15.             nor                1.00 
+      227 x_sub_cim1.x_nor16.             nor                1.00 
+      228 x_sub_cim1.x_nor17.             nor                1.00 
+      229 x_sub_cim1.x_nor20.             nor                1.00 
+      230 x_sub_cim1.x_nor21.             nor                1.00 
+      231 x_sub_cim1.x_nor22.             nor                1.00 
+      232 x_sub_cim1.x_nor23.             nor                1.00 
+      233 x_sub_cim1.x_nor24.             nor                1.00 
+      234 x_sub_cim1.x_nor25.             nor                1.00 
+      235 x_sub_cim1.x_nor26.             nor                1.00 
+      236 x_sub_cim1.x_nor27.             nor                1.00 
+      237 x_sub_cim1.x_nor30.             nor                1.00 
+      238 x_sub_cim1.x_nor31.             nor                1.00 
+      239 x_sub_cim1.x_nor32.             nor                1.00 
+      240 x_sub_cim1.x_nor33.             nor                1.00 
+      241 x_sub_cim1.x_nor34.             nor                1.00 
+      242 x_sub_cim1.x_nor35.             nor                1.00 
+      243 x_sub_cim1.x_nor36.             nor                1.00 
+      244 x_sub_cim1.x_nor37.             nor                1.00 
+      245 x_sub_cim1.x_write0.            write              1.00 
+      246 x_sub_cim1.x_write1.            write              1.00 
+      247 x_sub_cim1.x_write2.            write              1.00 
+      248 x_sub_cim1.x_write3.            write              1.00 
+      249 x_sub_cim1.x_write4.            write              1.00 
+      250 x_sub_cim1.x_write5.            write              1.00 
+      251 x_sub_cim1.x_write6.            write              1.00 
+      252 x_sub_cim1.x_write7.            write              1.00 
+      253 x_sub_cim1.x_sa0.               sa                 1.00 
+      254 x_sub_cim1.x_sa1.               sa                 1.00 
+      255 x_sub_cim1.x_sa2.               sa                 1.00 
+      256 x_sub_cim1.x_sa3.               sa                 1.00 
+      257 x_sub_cim1.x_sa4.               sa                 1.00 
+      258 x_sub_cim1.x_sa5.               sa                 1.00 
+      259 x_sub_cim1.x_sa6.               sa                 1.00 
+      260 x_sub_cim1.x_sa7.               sa                 1.00 
+      261 x_sub_cim2.x_buff0.             buffer             1.00 
+      262 x_sub_cim2.x_buff1.             buffer             1.00 
+      263 x_sub_cim2.x_buff2.             buffer             1.00 
+      264 x_sub_cim2.x_buff3.             buffer             1.00 
+      265 x_sub_cim2.x_buff4.             buffer             1.00 
+      266 x_sub_cim2.x_buff5.             buffer             1.00 
+      267 x_sub_cim2.x_buff6.             buffer             1.00 
+      268 x_sub_cim2.x_buff7.             buffer             1.00 
+      269 x_sub_cim2.x_pre0.              precharge          1.00 
+      270 x_sub_cim2.x_pre1.              precharge          1.00 
+      271 x_sub_cim2.x_pre2.              precharge          1.00 
+      272 x_sub_cim2.x_pre3.              precharge          1.00 
+      273 x_sub_cim2.x_pre4.              precharge          1.00 
+      274 x_sub_cim2.x_pre5.              precharge          1.00 
+      275 x_sub_cim2.x_pre6.              precharge          1.00 
+      276 x_sub_cim2.x_pre7.              precharge          1.00 
+      277 x_sub_cim2.x_ram00.             cell               1.00 
+      278 x_sub_cim2.x_ram01.             cell               1.00 
+      279 x_sub_cim2.x_ram02.             cell               1.00 
+      280 x_sub_cim2.x_ram03.             cell               1.00 
+      281 x_sub_cim2.x_ram04.             cell               1.00 
+      282 x_sub_cim2.x_ram05.             cell               1.00 
+      283 x_sub_cim2.x_ram06.             cell               1.00 
+      284 x_sub_cim2.x_ram07.             cell               1.00 
+      285 x_sub_cim2.x_ram10.             cell               1.00 
+      286 x_sub_cim2.x_ram11.             cell               1.00 
+      287 x_sub_cim2.x_ram12.             cell               1.00 
+      288 x_sub_cim2.x_ram13.             cell               1.00 
+      289 x_sub_cim2.x_ram14.             cell               1.00 
+      290 x_sub_cim2.x_ram15.             cell               1.00 
+      291 x_sub_cim2.x_ram16.             cell               1.00 
+      292 x_sub_cim2.x_ram17.             cell               1.00 
+      293 x_sub_cim2.x_ram20.             cell               1.00 
+      294 x_sub_cim2.x_ram21.             cell               1.00 
+      295 x_sub_cim2.x_ram22.             cell               1.00 
+      296 x_sub_cim2.x_ram23.             cell               1.00 
+      297 x_sub_cim2.x_ram24.             cell               1.00 
+      298 x_sub_cim2.x_ram25.             cell               1.00 
+      299 x_sub_cim2.x_ram26.             cell               1.00 
+      300 x_sub_cim2.x_ram27.             cell               1.00 
+      301 x_sub_cim2.x_ram30.             cell               1.00 
+      302 x_sub_cim2.x_ram31.             cell               1.00 
+      303 x_sub_cim2.x_ram32.             cell               1.00 
+      304 x_sub_cim2.x_ram33.             cell               1.00 
+      305 x_sub_cim2.x_ram34.             cell               1.00 
+      306 x_sub_cim2.x_ram35.             cell               1.00 
+      307 x_sub_cim2.x_ram36.             cell               1.00 
+      308 x_sub_cim2.x_ram37.             cell               1.00 
+      309 x_sub_cim2.x_buff_nor00.        inv_buf            1.00 
+      310 x_sub_cim2.x_buff_nor01.        inv_buf            1.00 
+      311 x_sub_cim2.x_buff_nor02.        inv_buf            1.00 
+      312 x_sub_cim2.x_buff_nor03.        inv_buf            1.00 
+      313 x_sub_cim2.x_buff_nor04.        inv_buf            1.00 
+      314 x_sub_cim2.x_buff_nor05.        inv_buf            1.00 
+      315 x_sub_cim2.x_buff_nor06.        inv_buf            1.00 
+      316 x_sub_cim2.x_buff_nor07.        inv_buf            1.00 
+      317 x_sub_cim2.x_buff_nor10.        inv_buf            1.00 
+      318 x_sub_cim2.x_buff_nor11.        inv_buf            1.00 
+      319 x_sub_cim2.x_buff_nor12.        inv_buf            1.00 
+      320 x_sub_cim2.x_buff_nor13.        inv_buf            1.00 
+      321 x_sub_cim2.x_buff_nor14.        inv_buf            1.00 
+      322 x_sub_cim2.x_buff_nor15.        inv_buf            1.00 
+      323 x_sub_cim2.x_buff_nor16.        inv_buf            1.00 
+      324 x_sub_cim2.x_buff_nor17.        inv_buf            1.00 
+      325 x_sub_cim2.x_buff_nor20.        inv_buf            1.00 
+      326 x_sub_cim2.x_buff_nor21.        inv_buf            1.00 
+      327 x_sub_cim2.x_buff_nor22.        inv_buf            1.00 
+      328 x_sub_cim2.x_buff_nor23.        inv_buf            1.00 
+      329 x_sub_cim2.x_buff_nor24.        inv_buf            1.00 
+      330 x_sub_cim2.x_buff_nor25.        inv_buf            1.00 
+      331 x_sub_cim2.x_buff_nor26.        inv_buf            1.00 
+      332 x_sub_cim2.x_buff_nor27.        inv_buf            1.00 
+      333 x_sub_cim2.x_buff_nor30.        inv_buf            1.00 
+      334 x_sub_cim2.x_buff_nor31.        inv_buf            1.00 
+      335 x_sub_cim2.x_buff_nor32.        inv_buf            1.00 
+      336 x_sub_cim2.x_buff_nor33.        inv_buf            1.00 
+      337 x_sub_cim2.x_buff_nor34.        inv_buf            1.00 
+      338 x_sub_cim2.x_buff_nor35.        inv_buf            1.00 
+      339 x_sub_cim2.x_buff_nor36.        inv_buf            1.00 
+      340 x_sub_cim2.x_buff_nor37.        inv_buf            1.00 
+      341 x_sub_cim2.x_nor00.             nor                1.00 
+      342 x_sub_cim2.x_nor01.             nor                1.00 
+      343 x_sub_cim2.x_nor02.             nor                1.00 
+      344 x_sub_cim2.x_nor03.             nor                1.00 
+      345 x_sub_cim2.x_nor04.             nor                1.00 
+      346 x_sub_cim2.x_nor05.             nor                1.00 
+      347 x_sub_cim2.x_nor06.             nor                1.00 
+      348 x_sub_cim2.x_nor07.             nor                1.00 
+      349 x_sub_cim2.x_nor10.             nor                1.00 
+      350 x_sub_cim2.x_nor11.             nor                1.00 
+      351 x_sub_cim2.x_nor12.             nor                1.00 
+      352 x_sub_cim2.x_nor13.             nor                1.00 
+      353 x_sub_cim2.x_nor14.             nor                1.00 
+      354 x_sub_cim2.x_nor15.             nor                1.00 
+      355 x_sub_cim2.x_nor16.             nor                1.00 
+      356 x_sub_cim2.x_nor17.             nor                1.00 
+      357 x_sub_cim2.x_nor20.             nor                1.00 
+      358 x_sub_cim2.x_nor21.             nor                1.00 
+      359 x_sub_cim2.x_nor22.             nor                1.00 
+      360 x_sub_cim2.x_nor23.             nor                1.00 
+      361 x_sub_cim2.x_nor24.             nor                1.00 
+      362 x_sub_cim2.x_nor25.             nor                1.00 
+      363 x_sub_cim2.x_nor26.             nor                1.00 
+      364 x_sub_cim2.x_nor27.             nor                1.00 
+      365 x_sub_cim2.x_nor30.             nor                1.00 
+      366 x_sub_cim2.x_nor31.             nor                1.00 
+      367 x_sub_cim2.x_nor32.             nor                1.00 
+      368 x_sub_cim2.x_nor33.             nor                1.00 
+      369 x_sub_cim2.x_nor34.             nor                1.00 
+      370 x_sub_cim2.x_nor35.             nor                1.00 
+      371 x_sub_cim2.x_nor36.             nor                1.00 
+      372 x_sub_cim2.x_nor37.             nor                1.00 
+      373 x_sub_cim2.x_write0.            write              1.00 
+      374 x_sub_cim2.x_write1.            write              1.00 
+      375 x_sub_cim2.x_write2.            write              1.00 
+      376 x_sub_cim2.x_write3.            write              1.00 
+      377 x_sub_cim2.x_write4.            write              1.00 
+      378 x_sub_cim2.x_write5.            write              1.00 
+      379 x_sub_cim2.x_write6.            write              1.00 
+      380 x_sub_cim2.x_write7.            write              1.00 
+      381 x_sub_cim2.x_sa0.               sa                 1.00 
+      382 x_sub_cim2.x_sa1.               sa                 1.00 
+      383 x_sub_cim2.x_sa2.               sa                 1.00 
+      384 x_sub_cim2.x_sa3.               sa                 1.00 
+      385 x_sub_cim2.x_sa4.               sa                 1.00 
+      386 x_sub_cim2.x_sa5.               sa                 1.00 
+      387 x_sub_cim2.x_sa6.               sa                 1.00 
+      388 x_sub_cim2.x_sa7.               sa                 1.00 
+      389 x_sub_cim3.x_buff0.             buffer             1.00 
+      390 x_sub_cim3.x_buff1.             buffer             1.00 
+      391 x_sub_cim3.x_buff2.             buffer             1.00 
+      392 x_sub_cim3.x_buff3.             buffer             1.00 
+      393 x_sub_cim3.x_buff4.             buffer             1.00 
+      394 x_sub_cim3.x_buff5.             buffer             1.00 
+      395 x_sub_cim3.x_buff6.             buffer             1.00 
+      396 x_sub_cim3.x_buff7.             buffer             1.00 
+      397 x_sub_cim3.x_pre0.              precharge          1.00 
+      398 x_sub_cim3.x_pre1.              precharge          1.00 
+      399 x_sub_cim3.x_pre2.              precharge          1.00 
+      400 x_sub_cim3.x_pre3.              precharge          1.00 
+      401 x_sub_cim3.x_pre4.              precharge          1.00 
+      402 x_sub_cim3.x_pre5.              precharge          1.00 
+      403 x_sub_cim3.x_pre6.              precharge          1.00 
+      404 x_sub_cim3.x_pre7.              precharge          1.00 
+      405 x_sub_cim3.x_ram00.             cell               1.00 
+      406 x_sub_cim3.x_ram01.             cell               1.00 
+      407 x_sub_cim3.x_ram02.             cell               1.00 
+      408 x_sub_cim3.x_ram03.             cell               1.00 
+      409 x_sub_cim3.x_ram04.             cell               1.00 
+      410 x_sub_cim3.x_ram05.             cell               1.00 
+      411 x_sub_cim3.x_ram06.             cell               1.00 
+      412 x_sub_cim3.x_ram07.             cell               1.00 
+      413 x_sub_cim3.x_ram10.             cell               1.00 
+      414 x_sub_cim3.x_ram11.             cell               1.00 
+      415 x_sub_cim3.x_ram12.             cell               1.00 
+      416 x_sub_cim3.x_ram13.             cell               1.00 
+      417 x_sub_cim3.x_ram14.             cell               1.00 
+      418 x_sub_cim3.x_ram15.             cell               1.00 
+      419 x_sub_cim3.x_ram16.             cell               1.00 
+      420 x_sub_cim3.x_ram17.             cell               1.00 
+      421 x_sub_cim3.x_ram20.             cell               1.00 
+      422 x_sub_cim3.x_ram21.             cell               1.00 
+      423 x_sub_cim3.x_ram22.             cell               1.00 
+      424 x_sub_cim3.x_ram23.             cell               1.00 
+      425 x_sub_cim3.x_ram24.             cell               1.00 
+      426 x_sub_cim3.x_ram25.             cell               1.00 
+      427 x_sub_cim3.x_ram26.             cell               1.00 
+      428 x_sub_cim3.x_ram27.             cell               1.00 
+      429 x_sub_cim3.x_ram30.             cell               1.00 
+      430 x_sub_cim3.x_ram31.             cell               1.00 
+      431 x_sub_cim3.x_ram32.             cell               1.00 
+      432 x_sub_cim3.x_ram33.             cell               1.00 
+      433 x_sub_cim3.x_ram34.             cell               1.00 
+      434 x_sub_cim3.x_ram35.             cell               1.00 
+      435 x_sub_cim3.x_ram36.             cell               1.00 
+      436 x_sub_cim3.x_ram37.             cell               1.00 
+      437 x_sub_cim3.x_buff_nor00.        inv_buf            1.00 
+      438 x_sub_cim3.x_buff_nor01.        inv_buf            1.00 
+      439 x_sub_cim3.x_buff_nor02.        inv_buf            1.00 
+      440 x_sub_cim3.x_buff_nor03.        inv_buf            1.00 
+      441 x_sub_cim3.x_buff_nor04.        inv_buf            1.00 
+      442 x_sub_cim3.x_buff_nor05.        inv_buf            1.00 
+      443 x_sub_cim3.x_buff_nor06.        inv_buf            1.00 
+      444 x_sub_cim3.x_buff_nor07.        inv_buf            1.00 
+      445 x_sub_cim3.x_buff_nor10.        inv_buf            1.00 
+      446 x_sub_cim3.x_buff_nor11.        inv_buf            1.00 
+      447 x_sub_cim3.x_buff_nor12.        inv_buf            1.00 
+      448 x_sub_cim3.x_buff_nor13.        inv_buf            1.00 
+      449 x_sub_cim3.x_buff_nor14.        inv_buf            1.00 
+      450 x_sub_cim3.x_buff_nor15.        inv_buf            1.00 
+      451 x_sub_cim3.x_buff_nor16.        inv_buf            1.00 
+      452 x_sub_cim3.x_buff_nor17.        inv_buf            1.00 
+      453 x_sub_cim3.x_buff_nor20.        inv_buf            1.00 
+      454 x_sub_cim3.x_buff_nor21.        inv_buf            1.00 
+      455 x_sub_cim3.x_buff_nor22.        inv_buf            1.00 
+      456 x_sub_cim3.x_buff_nor23.        inv_buf            1.00 
+      457 x_sub_cim3.x_buff_nor24.        inv_buf            1.00 
+      458 x_sub_cim3.x_buff_nor25.        inv_buf            1.00 
+      459 x_sub_cim3.x_buff_nor26.        inv_buf            1.00 
+      460 x_sub_cim3.x_buff_nor27.        inv_buf            1.00 
+      461 x_sub_cim3.x_buff_nor30.        inv_buf            1.00 
+      462 x_sub_cim3.x_buff_nor31.        inv_buf            1.00 
+      463 x_sub_cim3.x_buff_nor32.        inv_buf            1.00 
+      464 x_sub_cim3.x_buff_nor33.        inv_buf            1.00 
+      465 x_sub_cim3.x_buff_nor34.        inv_buf            1.00 
+      466 x_sub_cim3.x_buff_nor35.        inv_buf            1.00 
+      467 x_sub_cim3.x_buff_nor36.        inv_buf            1.00 
+      468 x_sub_cim3.x_buff_nor37.        inv_buf            1.00 
+      469 x_sub_cim3.x_nor00.             nor                1.00 
+      470 x_sub_cim3.x_nor01.             nor                1.00 
+      471 x_sub_cim3.x_nor02.             nor                1.00 
+      472 x_sub_cim3.x_nor03.             nor                1.00 
+      473 x_sub_cim3.x_nor04.             nor                1.00 
+      474 x_sub_cim3.x_nor05.             nor                1.00 
+      475 x_sub_cim3.x_nor06.             nor                1.00 
+      476 x_sub_cim3.x_nor07.             nor                1.00 
+      477 x_sub_cim3.x_nor10.             nor                1.00 
+      478 x_sub_cim3.x_nor11.             nor                1.00 
+      479 x_sub_cim3.x_nor12.             nor                1.00 
+      480 x_sub_cim3.x_nor13.             nor                1.00 
+      481 x_sub_cim3.x_nor14.             nor                1.00 
+      482 x_sub_cim3.x_nor15.             nor                1.00 
+      483 x_sub_cim3.x_nor16.             nor                1.00 
+      484 x_sub_cim3.x_nor17.             nor                1.00 
+      485 x_sub_cim3.x_nor20.             nor                1.00 
+      486 x_sub_cim3.x_nor21.             nor                1.00 
+      487 x_sub_cim3.x_nor22.             nor                1.00 
+      488 x_sub_cim3.x_nor23.             nor                1.00 
+      489 x_sub_cim3.x_nor24.             nor                1.00 
+      490 x_sub_cim3.x_nor25.             nor                1.00 
+      491 x_sub_cim3.x_nor26.             nor                1.00 
+      492 x_sub_cim3.x_nor27.             nor                1.00 
+      493 x_sub_cim3.x_nor30.             nor                1.00 
+      494 x_sub_cim3.x_nor31.             nor                1.00 
+      495 x_sub_cim3.x_nor32.             nor                1.00 
+      496 x_sub_cim3.x_nor33.             nor                1.00 
+      497 x_sub_cim3.x_nor34.             nor                1.00 
+      498 x_sub_cim3.x_nor35.             nor                1.00 
+      499 x_sub_cim3.x_nor36.             nor                1.00 
+      500 x_sub_cim3.x_nor37.             nor                1.00 
+      501 x_sub_cim3.x_write0.            write              1.00 
+      502 x_sub_cim3.x_write1.            write              1.00 
+      503 x_sub_cim3.x_write2.            write              1.00 
+      504 x_sub_cim3.x_write3.            write              1.00 
+      505 x_sub_cim3.x_write4.            write              1.00 
+      506 x_sub_cim3.x_write5.            write              1.00 
+      507 x_sub_cim3.x_write6.            write              1.00 
+      508 x_sub_cim3.x_write7.            write              1.00 
+      509 x_sub_cim3.x_sa0.               sa                 1.00 
+      510 x_sub_cim3.x_sa1.               sa                 1.00 
+      511 x_sub_cim3.x_sa2.               sa                 1.00 
+      512 x_sub_cim3.x_sa3.               sa                 1.00 
+      513 x_sub_cim3.x_sa4.               sa                 1.00 
+      514 x_sub_cim3.x_sa5.               sa                 1.00 
+      515 x_sub_cim3.x_sa6.               sa                 1.00 
+      516 x_sub_cim3.x_sa7.               sa                 1.00 
+      517 x_sub_cim0.x_buff0.xinv1.       inv_buf            1.00 
+      518 x_sub_cim0.x_buff0.xinv2.       inv_buf            1.00 
+      519 x_sub_cim0.x_buff1.xinv1.       inv_buf            1.00 
+      520 x_sub_cim0.x_buff1.xinv2.       inv_buf            1.00 
+      521 x_sub_cim0.x_buff2.xinv1.       inv_buf            1.00 
+      522 x_sub_cim0.x_buff2.xinv2.       inv_buf            1.00 
+      523 x_sub_cim0.x_buff3.xinv1.       inv_buf            1.00 
+      524 x_sub_cim0.x_buff3.xinv2.       inv_buf            1.00 
+      525 x_sub_cim0.x_buff4.xinv1.       inv_buf            1.00 
+      526 x_sub_cim0.x_buff4.xinv2.       inv_buf            1.00 
+      527 x_sub_cim0.x_buff5.xinv1.       inv_buf            1.00 
+      528 x_sub_cim0.x_buff5.xinv2.       inv_buf            1.00 
+      529 x_sub_cim0.x_buff6.xinv1.       inv_buf            1.00 
+      530 x_sub_cim0.x_buff6.xinv2.       inv_buf            1.00 
+      531 x_sub_cim0.x_buff7.xinv1.       inv_buf            1.00 
+      532 x_sub_cim0.x_buff7.xinv2.       inv_buf            1.00 
+      933 x_sub_cim0.x_write0.x1.         inv                1.00 
+      938 x_sub_cim0.x_write1.x1.         inv                1.00 
+      943 x_sub_cim0.x_write2.x1.         inv                1.00 
+      948 x_sub_cim0.x_write3.x1.         inv                1.00 
+      953 x_sub_cim0.x_write4.x1.         inv                1.00 
+      958 x_sub_cim0.x_write5.x1.         inv                1.00 
+      963 x_sub_cim0.x_write6.x1.         inv                1.00 
+      968 x_sub_cim0.x_write7.x1.         inv                1.00 
+      973 x_sub_cim0.x_sa0.x1.            inv                1.00 
+      979 x_sub_cim0.x_sa1.x1.            inv                1.00 
+      985 x_sub_cim0.x_sa2.x1.            inv                1.00 
+      991 x_sub_cim0.x_sa3.x1.            inv                1.00 
+      997 x_sub_cim0.x_sa4.x1.            inv                1.00 
+     1003 x_sub_cim0.x_sa5.x1.            inv                1.00 
+     1009 x_sub_cim0.x_sa6.x1.            inv                1.00 
+     1015 x_sub_cim0.x_sa7.x1.            inv                1.00 
+     1021 x_sub_cim1.x_buff0.xinv1.       inv_buf            1.00 
+     1022 x_sub_cim1.x_buff0.xinv2.       inv_buf            1.00 
+     1023 x_sub_cim1.x_buff1.xinv1.       inv_buf            1.00 
+     1024 x_sub_cim1.x_buff1.xinv2.       inv_buf            1.00 
+     1025 x_sub_cim1.x_buff2.xinv1.       inv_buf            1.00 
+     1026 x_sub_cim1.x_buff2.xinv2.       inv_buf            1.00 
+     1027 x_sub_cim1.x_buff3.xinv1.       inv_buf            1.00 
+     1028 x_sub_cim1.x_buff3.xinv2.       inv_buf            1.00 
+     1029 x_sub_cim1.x_buff4.xinv1.       inv_buf            1.00 
+     1030 x_sub_cim1.x_buff4.xinv2.       inv_buf            1.00 
+     1031 x_sub_cim1.x_buff5.xinv1.       inv_buf            1.00 
+     1032 x_sub_cim1.x_buff5.xinv2.       inv_buf            1.00 
+     1033 x_sub_cim1.x_buff6.xinv1.       inv_buf            1.00 
+     1034 x_sub_cim1.x_buff6.xinv2.       inv_buf            1.00 
+     1035 x_sub_cim1.x_buff7.xinv1.       inv_buf            1.00 
+     1036 x_sub_cim1.x_buff7.xinv2.       inv_buf            1.00 
+     1437 x_sub_cim1.x_write0.x1.         inv                1.00 
+     1442 x_sub_cim1.x_write1.x1.         inv                1.00 
+     1447 x_sub_cim1.x_write2.x1.         inv                1.00 
+     1452 x_sub_cim1.x_write3.x1.         inv                1.00 
+     1457 x_sub_cim1.x_write4.x1.         inv                1.00 
+     1462 x_sub_cim1.x_write5.x1.         inv                1.00 
+     1467 x_sub_cim1.x_write6.x1.         inv                1.00 
+     1472 x_sub_cim1.x_write7.x1.         inv                1.00 
+     1477 x_sub_cim1.x_sa0.x1.            inv                1.00 
+     1483 x_sub_cim1.x_sa1.x1.            inv                1.00 
+     1489 x_sub_cim1.x_sa2.x1.            inv                1.00 
+     1495 x_sub_cim1.x_sa3.x1.            inv                1.00 
+     1501 x_sub_cim1.x_sa4.x1.            inv                1.00 
+     1507 x_sub_cim1.x_sa5.x1.            inv                1.00 
+     1513 x_sub_cim1.x_sa6.x1.            inv                1.00 
+     1519 x_sub_cim1.x_sa7.x1.            inv                1.00 
+     1525 x_sub_cim2.x_buff0.xinv1.       inv_buf            1.00 
+     1526 x_sub_cim2.x_buff0.xinv2.       inv_buf            1.00 
+     1527 x_sub_cim2.x_buff1.xinv1.       inv_buf            1.00 
+     1528 x_sub_cim2.x_buff1.xinv2.       inv_buf            1.00 
+     1529 x_sub_cim2.x_buff2.xinv1.       inv_buf            1.00 
+     1530 x_sub_cim2.x_buff2.xinv2.       inv_buf            1.00 
+     1531 x_sub_cim2.x_buff3.xinv1.       inv_buf            1.00 
+     1532 x_sub_cim2.x_buff3.xinv2.       inv_buf            1.00 
+     1533 x_sub_cim2.x_buff4.xinv1.       inv_buf            1.00 
+     1534 x_sub_cim2.x_buff4.xinv2.       inv_buf            1.00 
+     1535 x_sub_cim2.x_buff5.xinv1.       inv_buf            1.00 
+     1536 x_sub_cim2.x_buff5.xinv2.       inv_buf            1.00 
+     1537 x_sub_cim2.x_buff6.xinv1.       inv_buf            1.00 
+     1538 x_sub_cim2.x_buff6.xinv2.       inv_buf            1.00 
+     1539 x_sub_cim2.x_buff7.xinv1.       inv_buf            1.00 
+     1540 x_sub_cim2.x_buff7.xinv2.       inv_buf            1.00 
+     1941 x_sub_cim2.x_write0.x1.         inv                1.00 
+     1946 x_sub_cim2.x_write1.x1.         inv                1.00 
+     1951 x_sub_cim2.x_write2.x1.         inv                1.00 
+     1956 x_sub_cim2.x_write3.x1.         inv                1.00 
+     1961 x_sub_cim2.x_write4.x1.         inv                1.00 
+     1966 x_sub_cim2.x_write5.x1.         inv                1.00 
+     1971 x_sub_cim2.x_write6.x1.         inv                1.00 
+     1976 x_sub_cim2.x_write7.x1.         inv                1.00 
+     1981 x_sub_cim2.x_sa0.x1.            inv                1.00 
+     1987 x_sub_cim2.x_sa1.x1.            inv                1.00 
+     1993 x_sub_cim2.x_sa2.x1.            inv                1.00 
+     1999 x_sub_cim2.x_sa3.x1.            inv                1.00 
+     2005 x_sub_cim2.x_sa4.x1.            inv                1.00 
+     2011 x_sub_cim2.x_sa5.x1.            inv                1.00 
+     2017 x_sub_cim2.x_sa6.x1.            inv                1.00 
+     2023 x_sub_cim2.x_sa7.x1.            inv                1.00 
+     2029 x_sub_cim3.x_buff0.xinv1.       inv_buf            1.00 
+     2030 x_sub_cim3.x_buff0.xinv2.       inv_buf            1.00 
+     2031 x_sub_cim3.x_buff1.xinv1.       inv_buf            1.00 
+     2032 x_sub_cim3.x_buff1.xinv2.       inv_buf            1.00 
+     2033 x_sub_cim3.x_buff2.xinv1.       inv_buf            1.00 
+     2034 x_sub_cim3.x_buff2.xinv2.       inv_buf            1.00 
+     2035 x_sub_cim3.x_buff3.xinv1.       inv_buf            1.00 
+     2036 x_sub_cim3.x_buff3.xinv2.       inv_buf            1.00 
+     2037 x_sub_cim3.x_buff4.xinv1.       inv_buf            1.00 
+     2038 x_sub_cim3.x_buff4.xinv2.       inv_buf            1.00 
+     2039 x_sub_cim3.x_buff5.xinv1.       inv_buf            1.00 
+     2040 x_sub_cim3.x_buff5.xinv2.       inv_buf            1.00 
+     2041 x_sub_cim3.x_buff6.xinv1.       inv_buf            1.00 
+     2042 x_sub_cim3.x_buff6.xinv2.       inv_buf            1.00 
+     2043 x_sub_cim3.x_buff7.xinv1.       inv_buf            1.00 
+     2044 x_sub_cim3.x_buff7.xinv2.       inv_buf            1.00 
+     2445 x_sub_cim3.x_write0.x1.         inv                1.00 
+     2450 x_sub_cim3.x_write1.x1.         inv                1.00 
+     2455 x_sub_cim3.x_write2.x1.         inv                1.00 
+     2460 x_sub_cim3.x_write3.x1.         inv                1.00 
+     2465 x_sub_cim3.x_write4.x1.         inv                1.00 
+     2470 x_sub_cim3.x_write5.x1.         inv                1.00 
+     2475 x_sub_cim3.x_write6.x1.         inv                1.00 
+     2480 x_sub_cim3.x_write7.x1.         inv                1.00 
+     2485 x_sub_cim3.x_sa0.x1.            inv                1.00 
+     2491 x_sub_cim3.x_sa1.x1.            inv                1.00 
+     2497 x_sub_cim3.x_sa2.x1.            inv                1.00 
+     2503 x_sub_cim3.x_sa3.x1.            inv                1.00 
+     2509 x_sub_cim3.x_sa4.x1.            inv                1.00 
+     2515 x_sub_cim3.x_sa5.x1.            inv                1.00 
+     2521 x_sub_cim3.x_sa6.x1.            inv                1.00 
+     2527 x_sub_cim3.x_sa7.x1.            inv                1.00 
+  **info** (reduced_6TSRAM.sp:304) DC voltage reset to initial transient source value in source 0:vd00. new dc=0.0000D+00
+  
+             
+ Warning:'No DC path nodes' occurs 3 times
+ No DC path from the following nodes,connected with gdcpath:
+ -----------------------
+ |Node      |Subckt    |
+ |----------+----------|
+ |pre_d2_1  |0         |
+ |pre_d2_2  |0         |
+ |pre_d2_3  |0         |
+ -----------------------
+              
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+  Opening plot unit= 15
+ file=reduced_6TSRAM.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+       node    =voltage         node    =voltage         node    =voltage
+
+ +   0:dout_0_0=  96.5767n    0:dout_0_1=  96.5767n    0:dout_0_2=  96.5767n
+ +   0:dout_0_3=  96.5767n    0:dout_1_0=  96.5767n    0:dout_1_1=  96.5767n
+ +   0:dout_1_2=  96.5767n    0:dout_1_3=  96.5767n    0:dout_2_0=  96.5767n
+ +   0:dout_2_1=  96.5767n    0:dout_2_2=  96.5767n    0:dout_2_3=  96.5767n
+ +   0:dout_3_0=  96.5767n    0:dout_3_1=  96.5767n    0:dout_3_2=  96.5767n
+ +   0:dout_3_3=  96.5767n    0:dout_4_0=  96.5767n    0:dout_4_1=  96.5767n
+ +   0:dout_4_2=  96.5767n    0:dout_4_3=  96.5767n    0:dout_5_0=  96.5767n
+ +   0:dout_5_1=  96.5767n    0:dout_5_2=  96.5767n    0:dout_5_3=  96.5767n
+ +   0:dout_6_0=  96.5767n    0:dout_6_1=  96.5767n    0:dout_6_2=  96.5767n
+ +   0:dout_6_3=  96.5767n    0:dout_7_0=  96.5767n    0:dout_7_1=  96.5767n
+ +   0:dout_7_2=  96.5767n    0:dout_7_3=  96.5767n    0:in00_0  =   0.     
+ +   0:in01_0  =   0.         0:in02_0  =   0.         0:in03_0  =   0.     
+ +   0:in04_0  =   0.         0:in05_0  =   0.         0:in06_0  =   0.     
+ +   0:in07_0  =   0.         0:in10_0  =   0.         0:in11_0  =   0.     
+ +   0:in12_0  =   0.         0:in13_0  =   0.         0:in14_0  =   0.     
+ +   0:in15_0  =   0.         0:in16_0  =   0.         0:in17_0  =   0.     
+ +   0:in20_0  =   0.         0:in21_0  =   0.         0:in22_0  =   0.     
+ +   0:in23_0  =   0.         0:in24_0  =   0.         0:in25_0  =   0.     
+ +   0:in26_0  =   0.         0:in27_0  =   0.         0:in30_0  =   0.     
+ +   0:in31_0  =   0.         0:in32_0  =   0.         0:in33_0  =   0.     
+ +   0:in34_0  =   0.         0:in35_0  =   0.         0:in36_0  =   0.     
+ +   0:in37_0  =   0.         0:out00_0 =   6.0561n    0:out00_1 =   6.0561n
+ +   0:out00_2 =   6.0561n    0:out00_3 =   6.0561n    0:out01_0 =   6.0561n
+ +   0:out01_1 =   6.0561n    0:out01_2 =   6.0561n    0:out01_3 =   6.0561n
+ +   0:out02_0 =   6.0561n    0:out02_1 =   6.0561n    0:out02_2 =   6.0561n
+ +   0:out02_3 =   6.0561n    0:out03_0 =   6.0561n    0:out03_1 =   6.0561n
+ +   0:out03_2 =   6.0561n    0:out03_3 =   6.0561n    0:out04_0 =   6.0561n
+ +   0:out04_1 =   6.0561n    0:out04_2 =   6.0561n    0:out04_3 =   6.0561n
+ +   0:out05_0 =   6.0561n    0:out05_1 =   6.0561n    0:out05_2 =   6.0561n
+ +   0:out05_3 =   6.0561n    0:out06_0 =   6.0561n    0:out06_1 =   6.0561n
+ +   0:out06_2 =   6.0561n    0:out06_3 =   6.0561n    0:out07_0 =   6.0561n
+ +   0:out07_1 =   6.0561n    0:out07_2 =   6.0561n    0:out07_3 =   6.0561n
+ +   0:out10_0 =   6.0561n    0:out10_1 =   6.0561n    0:out10_2 =   6.0561n
+ +   0:out10_3 =   6.0561n    0:out11_0 =   6.0561n    0:out11_1 =   6.0561n
+ +   0:out11_2 =   6.0561n    0:out11_3 =   6.0561n    0:out12_0 =   6.0561n
+ +   0:out12_1 =   6.0561n    0:out12_2 =   6.0561n    0:out12_3 =   6.0561n
+ +   0:out13_0 =   6.0561n    0:out13_1 =   6.0561n    0:out13_2 =   6.0561n
+ +   0:out13_3 =   6.0561n    0:out14_0 =   6.0561n    0:out14_1 =   6.0561n
+ +   0:out14_2 =   6.0561n    0:out14_3 =   6.0561n    0:out15_0 =   6.0561n
+ +   0:out15_1 =   6.0561n    0:out15_2 =   6.0561n    0:out15_3 =   6.0561n
+ +   0:out16_0 =   6.0561n    0:out16_1 =   6.0561n    0:out16_2 =   6.0561n
+ +   0:out16_3 =   6.0561n    0:out17_0 =   6.0561n    0:out17_1 =   6.0561n
+ +   0:out17_2 =   6.0561n    0:out17_3 =   6.0561n    0:out20_0 =   6.0561n
+ +   0:out20_1 =   6.0561n    0:out20_2 =   6.0561n    0:out20_3 =   6.0561n
+ +   0:out21_0 =   6.0561n    0:out21_1 =   6.0561n    0:out21_2 =   6.0561n
+ +   0:out21_3 =   6.0561n    0:out22_0 =   6.0561n    0:out22_1 =   6.0561n
+ +   0:out22_2 =   6.0561n    0:out22_3 =   6.0561n    0:out23_0 =   6.0561n
+ +   0:out23_1 =   6.0561n    0:out23_2 =   6.0561n    0:out23_3 =   6.0561n
+ +   0:out24_0 =   6.0561n    0:out24_1 =   6.0561n    0:out24_2 =   6.0561n
+ +   0:out24_3 =   6.0561n    0:out25_0 =   6.0561n    0:out25_1 =   6.0561n
+ +   0:out25_2 =   6.0561n    0:out25_3 =   6.0561n    0:out26_0 =   6.0561n
+ +   0:out26_1 =   6.0561n    0:out26_2 =   6.0561n    0:out26_3 =   6.0561n
+ +   0:out27_0 =   6.0561n    0:out27_1 =   6.0561n    0:out27_2 =   6.0561n
+ +   0:out27_3 =   6.0561n    0:out30_0 =   6.0561n    0:out30_1 =   6.0561n
+ +   0:out30_2 =   6.0561n    0:out30_3 =   6.0561n    0:out31_0 =   6.0561n
+ +   0:out31_1 =   6.0561n    0:out31_2 =   6.0561n    0:out31_3 =   6.0561n
+ +   0:out32_0 =   6.0561n    0:out32_1 =   6.0561n    0:out32_2 =   6.0561n
+ +   0:out32_3 =   6.0561n    0:out33_0 =   6.0561n    0:out33_1 =   6.0561n
+ +   0:out33_2 =   6.0561n    0:out33_3 =   6.0561n    0:out34_0 =   6.0561n
+ +   0:out34_1 =   6.0561n    0:out34_2 =   6.0561n    0:out34_3 =   6.0561n
+ +   0:out35_0 =   6.0561n    0:out35_1 =   6.0561n    0:out35_2 =   6.0561n
+ +   0:out35_3 =   6.0561n    0:out36_0 =   6.0561n    0:out36_1 =   6.0561n
+ +   0:out36_2 =   6.0561n    0:out36_3 =   6.0561n    0:out37_0 =   6.0561n
+ +   0:out37_1 =   6.0561n    0:out37_2 =   6.0561n    0:out37_3 =   6.0561n
+ +   0:pre_0_0 =   0.         0:pre_0_1 =   0.         0:pre_0_2 =   0.     
+ +   0:pre_0_3 =   0.         0:pre_1_0 =   0.         0:pre_1_1 =   0.     
+ +   0:pre_1_2 =   0.         0:pre_1_3 =   0.         0:pre_2_0 =   0.     
+ +   0:pre_2_1 =   0.         0:pre_2_2 =   0.         0:pre_2_3 =   0.     
+ +   0:pre_3_0 =   0.         0:pre_3_1 =   0.         0:pre_3_2 =   0.     
+ +   0:pre_3_3 =   0.         0:pre_4_0 =   0.         0:pre_4_1 =   0.     
+ +   0:pre_4_2 =   0.         0:pre_4_3 =   0.         0:pre_5_0 =   0.     
+ +   0:pre_5_1 =   0.         0:pre_5_2 =   0.         0:pre_5_3 =   0.     
+ +   0:pre_6_0 =   0.         0:pre_6_1 =   0.         0:pre_6_2 =   0.     
+ +   0:pre_6_3 =   0.         0:pre_7_0 =   0.         0:pre_7_1 =   0.     
+ +   0:pre_7_2 =   0.         0:pre_7_3 =   0.         0:pre_d0_0=   0.     
+ +   0:pre_d0_1=   0.         0:pre_d0_2=   0.         0:pre_d0_3=   0.     
+ +   0:pre_d1_0=   0.         0:pre_d1_1=   0.         0:pre_d1_2=   0.     
+ +   0:pre_d1_3=   0.         0:pre_d2_0=   0.         0:pre_d2_1=  23.9876m
+ +   0:pre_d2_2=  23.9876m    0:pre_d2_3=  23.9876m    0:pre_d3_0=   0.     
+ +   0:pre_d3_1=   0.         0:pre_d3_2=   0.         0:pre_d3_3=   0.     
+ +   0:pre_d4_0=   0.         0:pre_d4_1=   0.         0:pre_d4_2=   0.     
+ +   0:pre_d4_3=   0.         0:pre_d5_0=   0.         0:pre_d5_1=   0.     
+ +   0:pre_d5_2=   0.         0:pre_d5_3=   0.         0:pre_d6_0=   0.     
+ +   0:pre_d6_1=   0.         0:pre_d6_2=   0.         0:pre_d6_3=   0.     
+ +   0:pre_d7_0=   0.         0:pre_d7_1=   0.         0:pre_d7_2=   0.     
+ +   0:pre_d7_3=   0.         0:s_en    =   0.         0:vdd     =   1.8000 
+ +   0:vss     =   0.         0:w_en    =   0.         0:wl_0    =   0.     
+ +   0:wl_1    =   0.         0:wl_2    =   0.         0:wl_3    =   0.     
+ +   1:bl0     =   1.8000     1:bl1     =   1.8000     1:bl2     =   1.8000 
+ +   1:bl3     =   1.8000     1:bl4     =   1.8000     1:bl5     =   1.8000 
+ +   1:bl6     =   1.8000     1:bl7     =   1.8000     1:blb0    =   1.8000 
+ +   1:blb1    =   1.8000     1:blb2    =   1.8000     1:blb3    =   1.8000 
+ +   1:blb4    =   1.8000     1:blb5    =   1.8000     1:blb6    =   1.8000 
+ +   1:blb7    =   1.8000     1:d0      =   3.7264n    1:d1      =   3.7264n
+ +   1:d2      =   3.7264n    1:d3      =   3.7264n    1:d4      =   3.7264n
+ +   1:d5      =   3.7264n    1:d6      =   3.7264n    1:d7      =   3.7264n
+ +   1:in_b00  =   1.8000     1:in_b01  =   1.8000     1:in_b02  =   1.8000 
+ +   1:in_b03  =   1.8000     1:in_b04  =   1.8000     1:in_b05  =   1.8000 
+ +   1:in_b06  =   1.8000     1:in_b07  =   1.8000     1:in_b10  =   1.8000 
+ +   1:in_b11  =   1.8000     1:in_b12  =   1.8000     1:in_b13  =   1.8000 
+ +   1:in_b14  =   1.8000     1:in_b15  =   1.8000     1:in_b16  =   1.8000 
+ +   1:in_b17  =   1.8000     1:in_b20  =   1.8000     1:in_b21  =   1.8000 
+ +   1:in_b22  =   1.8000     1:in_b23  =   1.8000     1:in_b24  =   1.8000 
+ +   1:in_b25  =   1.8000     1:in_b26  =   1.8000     1:in_b27  =   1.8000 
+ +   1:in_b30  =   1.8000     1:in_b31  =   1.8000     1:in_b32  =   1.8000 
+ +   1:in_b33  =   1.8000     1:in_b34  =   1.8000     1:in_b35  =   1.8000 
+ +   1:in_b36  =   1.8000     1:in_b37  =   1.8000     1:q00     = 715.3101m
+ +   1:q01     = 715.3101m    1:q02     = 715.3101m    1:q03     = 715.3101m
+ +   1:q04     = 715.3101m    1:q05     = 715.3101m    1:q06     = 715.3101m
+ +   1:q07     = 715.3101m    1:q10     = 715.3101m    1:q11     = 715.3101m
+ +   1:q12     = 715.3101m    1:q13     = 715.3101m    1:q14     = 715.3101m
+ +   1:q15     = 715.3101m    1:q16     = 715.3101m    1:q17     = 715.3101m
+ +   1:q20     = 715.3101m    1:q21     = 715.3101m    1:q22     = 715.3101m
+ +   1:q23     = 715.3101m    1:q24     = 715.3101m    1:q25     = 715.3101m
+ +   1:q26     = 715.3101m    1:q27     = 715.3101m    1:q30     = 715.3101m
+ +   1:q31     = 715.3101m    1:q32     = 715.3101m    1:q33     = 715.3101m
+ +   1:q34     = 715.3101m    1:q35     = 715.3101m    1:q36     = 715.3101m
+ +   1:q37     = 715.3101m    1:qb00    = 715.3101m    1:qb01    = 715.3101m
+ +   1:qb02    = 715.3101m    1:qb03    = 715.3101m    1:qb04    = 715.3101m
+ +   1:qb05    = 715.3101m    1:qb06    = 715.3101m    1:qb07    = 715.3101m
+ +   1:qb10    = 715.3101m    1:qb11    = 715.3101m    1:qb12    = 715.3101m
+ +   1:qb13    = 715.3101m    1:qb14    = 715.3101m    1:qb15    = 715.3101m
+ +   1:qb16    = 715.3101m    1:qb17    = 715.3101m    1:qb20    = 715.3101m
+ +   1:qb21    = 715.3101m    1:qb22    = 715.3101m    1:qb23    = 715.3101m
+ +   1:qb24    = 715.3101m    1:qb25    = 715.3101m    1:qb26    = 715.3101m
+ +   1:qb27    = 715.3101m    1:qb30    = 715.3101m    1:qb31    = 715.3101m
+ +   1:qb32    = 715.3101m    1:qb33    = 715.3101m    1:qb34    = 715.3101m
+ +   1:qb35    = 715.3101m    1:qb36    = 715.3101m    1:qb37    = 715.3101m
+ +   2:bl0     =   1.8000     2:bl1     =   1.8000     2:bl2     =   1.8000 
+ +   2:bl3     =   1.8000     2:bl4     =   1.8000     2:bl5     =   1.8000 
+ +   2:bl6     =   1.8000     2:bl7     =   1.8000     2:blb0    =   1.8000 
+ +   2:blb1    =   1.8000     2:blb2    =   1.8000     2:blb3    =   1.8000 
+ +   2:blb4    =   1.8000     2:blb5    =   1.8000     2:blb6    =   1.8000 
+ +   2:blb7    =   1.8000     2:d0      =   3.7264n    2:d1      =   3.7264n
+ +   2:d2      =   3.7264n    2:d3      =   3.7264n    2:d4      =   3.7264n
+ +   2:d5      =   3.7264n    2:d6      =   3.7264n    2:d7      =   3.7264n
+ +   2:in_b00  =   1.8000     2:in_b01  =   1.8000     2:in_b02  =   1.8000 
+ +   2:in_b03  =   1.8000     2:in_b04  =   1.8000     2:in_b05  =   1.8000 
+ +   2:in_b06  =   1.8000     2:in_b07  =   1.8000     2:in_b10  =   1.8000 
+ +   2:in_b11  =   1.8000     2:in_b12  =   1.8000     2:in_b13  =   1.8000 
+ +   2:in_b14  =   1.8000     2:in_b15  =   1.8000     2:in_b16  =   1.8000 
+ +   2:in_b17  =   1.8000     2:in_b20  =   1.8000     2:in_b21  =   1.8000 
+ +   2:in_b22  =   1.8000     2:in_b23  =   1.8000     2:in_b24  =   1.8000 
+ +   2:in_b25  =   1.8000     2:in_b26  =   1.8000     2:in_b27  =   1.8000 
+ +   2:in_b30  =   1.8000     2:in_b31  =   1.8000     2:in_b32  =   1.8000 
+ +   2:in_b33  =   1.8000     2:in_b34  =   1.8000     2:in_b35  =   1.8000 
+ +   2:in_b36  =   1.8000     2:in_b37  =   1.8000     2:q00     = 715.3101m
+ +   2:q01     = 715.3101m    2:q02     = 715.3101m    2:q03     = 715.3101m
+ +   2:q04     = 715.3101m    2:q05     = 715.3101m    2:q06     = 715.3101m
+ +   2:q07     = 715.3101m    2:q10     = 715.3101m    2:q11     = 715.3101m
+ +   2:q12     = 715.3101m    2:q13     = 715.3101m    2:q14     = 715.3101m
+ +   2:q15     = 715.3101m    2:q16     = 715.3101m    2:q17     = 715.3101m
+ +   2:q20     = 715.3101m    2:q21     = 715.3101m    2:q22     = 715.3101m
+ +   2:q23     = 715.3101m    2:q24     = 715.3101m    2:q25     = 715.3101m
+ +   2:q26     = 715.3101m    2:q27     = 715.3101m    2:q30     = 715.3101m
+ +   2:q31     = 715.3101m    2:q32     = 715.3101m    2:q33     = 715.3101m
+ +   2:q34     = 715.3101m    2:q35     = 715.3101m    2:q36     = 715.3101m
+ +   2:q37     = 715.3101m    2:qb00    = 715.3101m    2:qb01    = 715.3101m
+ +   2:qb02    = 715.3101m    2:qb03    = 715.3101m    2:qb04    = 715.3101m
+ +   2:qb05    = 715.3101m    2:qb06    = 715.3101m    2:qb07    = 715.3101m
+ +   2:qb10    = 715.3101m    2:qb11    = 715.3101m    2:qb12    = 715.3101m
+ +   2:qb13    = 715.3101m    2:qb14    = 715.3101m    2:qb15    = 715.3101m
+ +   2:qb16    = 715.3101m    2:qb17    = 715.3101m    2:qb20    = 715.3101m
+ +   2:qb21    = 715.3101m    2:qb22    = 715.3101m    2:qb23    = 715.3101m
+ +   2:qb24    = 715.3101m    2:qb25    = 715.3101m    2:qb26    = 715.3101m
+ +   2:qb27    = 715.3101m    2:qb30    = 715.3101m    2:qb31    = 715.3101m
+ +   2:qb32    = 715.3101m    2:qb33    = 715.3101m    2:qb34    = 715.3101m
+ +   2:qb35    = 715.3101m    2:qb36    = 715.3101m    2:qb37    = 715.3101m
+ +   3:bl0     =   1.8000     3:bl1     =   1.8000     3:bl2     =   1.8000 
+ +   3:bl3     =   1.8000     3:bl4     =   1.8000     3:bl5     =   1.8000 
+ +   3:bl6     =   1.8000     3:bl7     =   1.8000     3:blb0    =   1.8000 
+ +   3:blb1    =   1.8000     3:blb2    =   1.8000     3:blb3    =   1.8000 
+ +   3:blb4    =   1.8000     3:blb5    =   1.8000     3:blb6    =   1.8000 
+ +   3:blb7    =   1.8000     3:d0      =   3.7264n    3:d1      =   3.7264n
+ +   3:d2      =   3.7264n    3:d3      =   3.7264n    3:d4      =   3.7264n
+ +   3:d5      =   3.7264n    3:d6      =   3.7264n    3:d7      =   3.7264n
+ +   3:in_b00  =   1.8000     3:in_b01  =   1.8000     3:in_b02  =   1.8000 
+ +   3:in_b03  =   1.8000     3:in_b04  =   1.8000     3:in_b05  =   1.8000 
+ +   3:in_b06  =   1.8000     3:in_b07  =   1.8000     3:in_b10  =   1.8000 
+ +   3:in_b11  =   1.8000     3:in_b12  =   1.8000     3:in_b13  =   1.8000 
+ +   3:in_b14  =   1.8000     3:in_b15  =   1.8000     3:in_b16  =   1.8000 
+ +   3:in_b17  =   1.8000     3:in_b20  =   1.8000     3:in_b21  =   1.8000 
+ +   3:in_b22  =   1.8000     3:in_b23  =   1.8000     3:in_b24  =   1.8000 
+ +   3:in_b25  =   1.8000     3:in_b26  =   1.8000     3:in_b27  =   1.8000 
+ +   3:in_b30  =   1.8000     3:in_b31  =   1.8000     3:in_b32  =   1.8000 
+ +   3:in_b33  =   1.8000     3:in_b34  =   1.8000     3:in_b35  =   1.8000 
+ +   3:in_b36  =   1.8000     3:in_b37  =   1.8000     3:q00     = 715.3101m
+ +   3:q01     = 715.3101m    3:q02     = 715.3101m    3:q03     = 715.3101m
+ +   3:q04     = 715.3101m    3:q05     = 715.3101m    3:q06     = 715.3101m
+ +   3:q07     = 715.3101m    3:q10     = 715.3101m    3:q11     = 715.3101m
+ +   3:q12     = 715.3101m    3:q13     = 715.3101m    3:q14     = 715.3101m
+ +   3:q15     = 715.3101m    3:q16     = 715.3101m    3:q17     = 715.3101m
+ +   3:q20     = 715.3101m    3:q21     = 715.3101m    3:q22     = 715.3101m
+ +   3:q23     = 715.3101m    3:q24     = 715.3101m    3:q25     = 715.3101m
+ +   3:q26     = 715.3101m    3:q27     = 715.3101m    3:q30     = 715.3101m
+ +   3:q31     = 715.3101m    3:q32     = 715.3101m    3:q33     = 715.3101m
+ +   3:q34     = 715.3101m    3:q35     = 715.3101m    3:q36     = 715.3101m
+ +   3:q37     = 715.3101m    3:qb00    = 715.3101m    3:qb01    = 715.3101m
+ +   3:qb02    = 715.3101m    3:qb03    = 715.3101m    3:qb04    = 715.3101m
+ +   3:qb05    = 715.3101m    3:qb06    = 715.3101m    3:qb07    = 715.3101m
+ +   3:qb10    = 715.3101m    3:qb11    = 715.3101m    3:qb12    = 715.3101m
+ +   3:qb13    = 715.3101m    3:qb14    = 715.3101m    3:qb15    = 715.3101m
+ +   3:qb16    = 715.3101m    3:qb17    = 715.3101m    3:qb20    = 715.3101m
+ +   3:qb21    = 715.3101m    3:qb22    = 715.3101m    3:qb23    = 715.3101m
+ +   3:qb24    = 715.3101m    3:qb25    = 715.3101m    3:qb26    = 715.3101m
+ +   3:qb27    = 715.3101m    3:qb30    = 715.3101m    3:qb31    = 715.3101m
+ +   3:qb32    = 715.3101m    3:qb33    = 715.3101m    3:qb34    = 715.3101m
+ +   3:qb35    = 715.3101m    3:qb36    = 715.3101m    3:qb37    = 715.3101m
+ +   4:bl0     =   1.8000     4:bl1     =   1.8000     4:bl2     =   1.8000 
+ +   4:bl3     =   1.8000     4:bl4     =   1.8000     4:bl5     =   1.8000 
+ +   4:bl6     =   1.8000     4:bl7     =   1.8000     4:blb0    =   1.8000 
+ +   4:blb1    =   1.8000     4:blb2    =   1.8000     4:blb3    =   1.8000 
+ +   4:blb4    =   1.8000     4:blb5    =   1.8000     4:blb6    =   1.8000 
+ +   4:blb7    =   1.8000     4:d0      =   3.7264n    4:d1      =   3.7264n
+ +   4:d2      =   3.7264n    4:d3      =   3.7264n    4:d4      =   3.7264n
+ +   4:d5      =   3.7264n    4:d6      =   3.7264n    4:d7      =   3.7264n
+ +   4:in_b00  =   1.8000     4:in_b01  =   1.8000     4:in_b02  =   1.8000 
+ +   4:in_b03  =   1.8000     4:in_b04  =   1.8000     4:in_b05  =   1.8000 
+ +   4:in_b06  =   1.8000     4:in_b07  =   1.8000     4:in_b10  =   1.8000 
+ +   4:in_b11  =   1.8000     4:in_b12  =   1.8000     4:in_b13  =   1.8000 
+ +   4:in_b14  =   1.8000     4:in_b15  =   1.8000     4:in_b16  =   1.8000 
+ +   4:in_b17  =   1.8000     4:in_b20  =   1.8000     4:in_b21  =   1.8000 
+ +   4:in_b22  =   1.8000     4:in_b23  =   1.8000     4:in_b24  =   1.8000 
+ +   4:in_b25  =   1.8000     4:in_b26  =   1.8000     4:in_b27  =   1.8000 
+ +   4:in_b30  =   1.8000     4:in_b31  =   1.8000     4:in_b32  =   1.8000 
+ +   4:in_b33  =   1.8000     4:in_b34  =   1.8000     4:in_b35  =   1.8000 
+ +   4:in_b36  =   1.8000     4:in_b37  =   1.8000     4:q00     = 715.3101m
+ +   4:q01     = 715.3101m    4:q02     = 715.3101m    4:q03     = 715.3101m
+ +   4:q04     = 715.3101m    4:q05     = 715.3101m    4:q06     = 715.3101m
+ +   4:q07     = 715.3101m    4:q10     = 715.3101m    4:q11     = 715.3101m
+ +   4:q12     = 715.3101m    4:q13     = 715.3101m    4:q14     = 715.3101m
+ +   4:q15     = 715.3101m    4:q16     = 715.3101m    4:q17     = 715.3101m
+ +   4:q20     = 715.3101m    4:q21     = 715.3101m    4:q22     = 715.3101m
+ +   4:q23     = 715.3101m    4:q24     = 715.3101m    4:q25     = 715.3101m
+ +   4:q26     = 715.3101m    4:q27     = 715.3101m    4:q30     = 715.3101m
+ +   4:q31     = 715.3101m    4:q32     = 715.3101m    4:q33     = 715.3101m
+ +   4:q34     = 715.3101m    4:q35     = 715.3101m    4:q36     = 715.3101m
+ +   4:q37     = 715.3101m    4:qb00    = 715.3101m    4:qb01    = 715.3101m
+ +   4:qb02    = 715.3101m    4:qb03    = 715.3101m    4:qb04    = 715.3101m
+ +   4:qb05    = 715.3101m    4:qb06    = 715.3101m    4:qb07    = 715.3101m
+ +   4:qb10    = 715.3101m    4:qb11    = 715.3101m    4:qb12    = 715.3101m
+ +   4:qb13    = 715.3101m    4:qb14    = 715.3101m    4:qb15    = 715.3101m
+ +   4:qb16    = 715.3101m    4:qb17    = 715.3101m    4:qb20    = 715.3101m
+ +   4:qb21    = 715.3101m    4:qb22    = 715.3101m    4:qb23    = 715.3101m
+ +   4:qb24    = 715.3101m    4:qb25    = 715.3101m    4:qb26    = 715.3101m
+ +   4:qb27    = 715.3101m    4:qb30    = 715.3101m    4:qb31    = 715.3101m
+ +   4:qb32    = 715.3101m    4:qb33    = 715.3101m    4:qb34    = 715.3101m
+ +   4:qb35    = 715.3101m    4:qb36    = 715.3101m    4:qb37    = 715.3101m
+ +   5:tmp     =   1.8000     6:tmp     =   1.8000     7:tmp     =   1.8000 
+ +   8:tmp     =   1.8000     9:tmp     =   1.8000    10:tmp     =   1.8000 
+ +  11:tmp     =   1.8000    12:tmp     =   1.8000    85:n1      =   1.8000 
+ +  86:n1      =   1.8000    87:n1      =   1.8000    88:n1      =   1.8000 
+ +  89:n1      =   1.8000    90:n1      =   1.8000    91:n1      =   1.8000 
+ +  92:n1      =   1.8000    93:n1      =   1.8000    94:n1      =   1.8000 
+ +  95:n1      =   1.8000    96:n1      =   1.8000    97:n1      =   1.8000 
+ +  98:n1      =   1.8000    99:n1      =   1.8000   100:n1      =   1.8000 
+ + 101:n1      =   1.8000   102:n1      =   1.8000   103:n1      =   1.8000 
+ + 104:n1      =   1.8000   105:n1      =   1.8000   106:n1      =   1.8000 
+ + 107:n1      =   1.8000   108:n1      =   1.8000   109:n1      =   1.8000 
+ + 110:n1      =   1.8000   111:n1      =   1.8000   112:n1      =   1.8000 
+ + 113:n1      =   1.8000   114:n1      =   1.8000   115:n1      =   1.8000 
+ + 116:n1      =   1.8000   117:1       =  64.7037m  117:2       =  36.7818n
+ + 117:in1     =   1.8000   118:1       =  64.7037m  118:2       =  36.7818n
+ + 118:in1     =   1.8000   119:1       =  64.7037m  119:2       =  36.7818n
+ + 119:in1     =   1.8000   120:1       =  64.7037m  120:2       =  36.7818n
+ + 120:in1     =   1.8000   121:1       =  64.7037m  121:2       =  36.7818n
+ + 121:in1     =   1.8000   122:1       =  64.7037m  122:2       =  36.7818n
+ + 122:in1     =   1.8000   123:1       =  64.7037m  123:2       =  36.7818n
+ + 123:in1     =   1.8000   124:1       =  64.7037m  124:2       =  36.7818n
+ + 124:in1     =   1.8000   125:n1      =   1.6989   125:n2      =   1.6121 
+ + 125:y       =   1.6988   126:n1      =   1.6989   126:n2      =   1.6121 
+ + 126:y       =   1.6988   127:n1      =   1.6989   127:n2      =   1.6121 
+ + 127:y       =   1.6988   128:n1      =   1.6989   128:n2      =   1.6121 
+ + 128:y       =   1.6988   129:n1      =   1.6989   129:n2      =   1.6121 
+ + 129:y       =   1.6988   130:n1      =   1.6989   130:n2      =   1.6121 
+ + 130:y       =   1.6988   131:n1      =   1.6989   131:n2      =   1.6121 
+ + 131:y       =   1.6988   132:n1      =   1.6989   132:n2      =   1.6121 
+ + 132:y       =   1.6988   133:tmp     =   1.8000   134:tmp     =   1.8000 
+ + 135:tmp     =   1.8000   136:tmp     =   1.8000   137:tmp     =   1.8000 
+ + 138:tmp     =   1.8000   139:tmp     =   1.8000   140:tmp     =   1.8000 
+ + 213:n1      =   1.8000   214:n1      =   1.8000   215:n1      =   1.8000 
+ + 216:n1      =   1.8000   217:n1      =   1.8000   218:n1      =   1.8000 
+ + 219:n1      =   1.8000   220:n1      =   1.8000   221:n1      =   1.8000 
+ + 222:n1      =   1.8000   223:n1      =   1.8000   224:n1      =   1.8000 
+ + 225:n1      =   1.8000   226:n1      =   1.8000   227:n1      =   1.8000 
+ + 228:n1      =   1.8000   229:n1      =   1.8000   230:n1      =   1.8000 
+ + 231:n1      =   1.8000   232:n1      =   1.8000   233:n1      =   1.8000 
+ + 234:n1      =   1.8000   235:n1      =   1.8000   236:n1      =   1.8000 
+ + 237:n1      =   1.8000   238:n1      =   1.8000   239:n1      =   1.8000 
+ + 240:n1      =   1.8000   241:n1      =   1.8000   242:n1      =   1.8000 
+ + 243:n1      =   1.8000   244:n1      =   1.8000   245:1       =  64.7037m
+ + 245:2       =  36.7818n  245:in1     =   1.8000   246:1       =  64.7037m
+ + 246:2       =  36.7818n  246:in1     =   1.8000   247:1       =  64.7037m
+ + 247:2       =  36.7818n  247:in1     =   1.8000   248:1       =  64.7037m
+ + 248:2       =  36.7818n  248:in1     =   1.8000   249:1       =  64.7037m
+ + 249:2       =  36.7818n  249:in1     =   1.8000   250:1       =  64.7037m
+ + 250:2       =  36.7818n  250:in1     =   1.8000   251:1       =  64.7037m
+ + 251:2       =  36.7818n  251:in1     =   1.8000   252:1       =  64.7037m
+ + 252:2       =  36.7818n  252:in1     =   1.8000   253:n1      =   1.6989 
+ + 253:n2      =   1.6121   253:y       =   1.6988   254:n1      =   1.6989 
+ + 254:n2      =   1.6121   254:y       =   1.6988   255:n1      =   1.6989 
+ + 255:n2      =   1.6121   255:y       =   1.6988   256:n1      =   1.6989 
+ + 256:n2      =   1.6121   256:y       =   1.6988   257:n1      =   1.6989 
+ + 257:n2      =   1.6121   257:y       =   1.6988   258:n1      =   1.6989 
+ + 258:n2      =   1.6121   258:y       =   1.6988   259:n1      =   1.6989 
+ + 259:n2      =   1.6121   259:y       =   1.6988   260:n1      =   1.6989 
+ + 260:n2      =   1.6121   260:y       =   1.6988   261:tmp     =   1.8000 
+ + 262:tmp     =   1.8000   263:tmp     =   1.8000   264:tmp     =   1.8000 
+ + 265:tmp     =   1.8000   266:tmp     =   1.8000   267:tmp     =   1.8000 
+ + 268:tmp     =   1.8000   341:n1      =   1.8000   342:n1      =   1.8000 
+ + 343:n1      =   1.8000   344:n1      =   1.8000   345:n1      =   1.8000 
+ + 346:n1      =   1.8000   347:n1      =   1.8000   348:n1      =   1.8000 
+ + 349:n1      =   1.8000   350:n1      =   1.8000   351:n1      =   1.8000 
+ + 352:n1      =   1.8000   353:n1      =   1.8000   354:n1      =   1.8000 
+ + 355:n1      =   1.8000   356:n1      =   1.8000   357:n1      =   1.8000 
+ + 358:n1      =   1.8000   359:n1      =   1.8000   360:n1      =   1.8000 
+ + 361:n1      =   1.8000   362:n1      =   1.8000   363:n1      =   1.8000 
+ + 364:n1      =   1.8000   365:n1      =   1.8000   366:n1      =   1.8000 
+ + 367:n1      =   1.8000   368:n1      =   1.8000   369:n1      =   1.8000 
+ + 370:n1      =   1.8000   371:n1      =   1.8000   372:n1      =   1.8000 
+ + 373:1       =  64.7037m  373:2       =  36.7818n  373:in1     =   1.8000 
+ + 374:1       =  64.7037m  374:2       =  36.7818n  374:in1     =   1.8000 
+ + 375:1       =  64.7037m  375:2       =  36.7818n  375:in1     =   1.8000 
+ + 376:1       =  64.7037m  376:2       =  36.7818n  376:in1     =   1.8000 
+ + 377:1       =  64.7037m  377:2       =  36.7818n  377:in1     =   1.8000 
+ + 378:1       =  64.7037m  378:2       =  36.7818n  378:in1     =   1.8000 
+ + 379:1       =  64.7037m  379:2       =  36.7818n  379:in1     =   1.8000 
+ + 380:1       =  64.7037m  380:2       =  36.7818n  380:in1     =   1.8000 
+ + 381:n1      =   1.6989   381:n2      =   1.6121   381:y       =   1.6988 
+ + 382:n1      =   1.6989   382:n2      =   1.6121   382:y       =   1.6988 
+ + 383:n1      =   1.6989   383:n2      =   1.6121   383:y       =   1.6988 
+ + 384:n1      =   1.6989   384:n2      =   1.6121   384:y       =   1.6988 
+ + 385:n1      =   1.6989   385:n2      =   1.6121   385:y       =   1.6988 
+ + 386:n1      =   1.6989   386:n2      =   1.6121   386:y       =   1.6988 
+ + 387:n1      =   1.6989   387:n2      =   1.6121   387:y       =   1.6988 
+ + 388:n1      =   1.6989   388:n2      =   1.6121   388:y       =   1.6988 
+ + 389:tmp     =   1.8000   390:tmp     =   1.8000   391:tmp     =   1.8000 
+ + 392:tmp     =   1.8000   393:tmp     =   1.8000   394:tmp     =   1.8000 
+ + 395:tmp     =   1.8000   396:tmp     =   1.8000   469:n1      =   1.8000 
+ + 470:n1      =   1.8000   471:n1      =   1.8000   472:n1      =   1.8000 
+ + 473:n1      =   1.8000   474:n1      =   1.8000   475:n1      =   1.8000 
+ + 476:n1      =   1.8000   477:n1      =   1.8000   478:n1      =   1.8000 
+ + 479:n1      =   1.8000   480:n1      =   1.8000   481:n1      =   1.8000 
+ + 482:n1      =   1.8000   483:n1      =   1.8000   484:n1      =   1.8000 
+ + 485:n1      =   1.8000   486:n1      =   1.8000   487:n1      =   1.8000 
+ + 488:n1      =   1.8000   489:n1      =   1.8000   490:n1      =   1.8000 
+ + 491:n1      =   1.8000   492:n1      =   1.8000   493:n1      =   1.8000 
+ + 494:n1      =   1.8000   495:n1      =   1.8000   496:n1      =   1.8000 
+ + 497:n1      =   1.8000   498:n1      =   1.8000   499:n1      =   1.8000 
+ + 500:n1      =   1.8000   501:1       =  64.7037m  501:2       =  36.7818n
+ + 501:in1     =   1.8000   502:1       =  64.7037m  502:2       =  36.7818n
+ + 502:in1     =   1.8000   503:1       =  64.7037m  503:2       =  36.7818n
+ + 503:in1     =   1.8000   504:1       =  64.7037m  504:2       =  36.7818n
+ + 504:in1     =   1.8000   505:1       =  64.7037m  505:2       =  36.7818n
+ + 505:in1     =   1.8000   506:1       =  64.7037m  506:2       =  36.7818n
+ + 506:in1     =   1.8000   507:1       =  64.7037m  507:2       =  36.7818n
+ + 507:in1     =   1.8000   508:1       =  64.7037m  508:2       =  36.7818n
+ + 508:in1     =   1.8000   509:n1      =   1.6989   509:n2      =   1.6121 
+ + 509:y       =   1.6988   510:n1      =   1.6989   510:n2      =   1.6121 
+ + 510:y       =   1.6988   511:n1      =   1.6989   511:n2      =   1.6121 
+ + 511:y       =   1.6988   512:n1      =   1.6989   512:n2      =   1.6121 
+ + 512:y       =   1.6988   513:n1      =   1.6989   513:n2      =   1.6121 
+ + 513:y       =   1.6988   514:n1      =   1.6989   514:n2      =   1.6121 
+ + 514:y       =   1.6988   515:n1      =   1.6989   515:n2      =   1.6121 
+ + 515:y       =   1.6988   516:n1      =   1.6989   516:n2      =   1.6121 
+ + 516:y       =   1.6988 
+
+
+ **** voltage sources
+
+ subckt                                                          
+ element     0:vd00        0:vd01        0:vd02        0:vd03    
+  volts         0.            0.            0.            0.     
+  current      24.8767f      24.8767f      24.8767f      24.8767f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vd04        0:vd05        0:vd06        0:vd07    
+  volts         0.            0.            0.            0.     
+  current      24.8767f      24.8767f      24.8767f      24.8767f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vd10        0:vd11        0:vd13        0:vd14    
+  volts         0.            0.            0.            0.     
+  current      24.8767f      24.8767f      24.8767f      24.8767f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vd15        0:vd16        0:vd17        0:vd20    
+  volts         0.            0.            0.            0.     
+  current      24.8767f      24.8767f      24.8767f      24.8767f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vd21        0:vd23        0:vd24        0:vd25    
+  volts         0.            0.            0.            0.     
+  current      24.8767f      24.8767f      24.8767f      24.8767f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vd26        0:vd27        0:vd30        0:vd31    
+  volts         0.            0.            0.            0.     
+  current      24.8767f      24.8767f      24.8767f      24.8767f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vd33        0:vd34        0:vd35        0:vd36    
+  volts         0.            0.            0.            0.     
+  current      24.8767f      24.8767f      24.8767f      24.8767f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vd37        0:vdd         0:vin00_0     0:vin01_0 
+  volts         0.            1.8000        0.            0.     
+  current      24.8767f     -18.6611m      99.5069f      99.5069f
+  power         0.           33.5899m       0.            0.     
+
+ subckt                                                          
+ element     0:vin02_0     0:vin03_0     0:vin04_0     0:vin05_0 
+  volts         0.            0.            0.            0.     
+  current      99.5069f      99.5069f      99.5069f      99.5069f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vin06_0     0:vin07_0     0:vin10_0     0:vin11_0 
+  volts         0.            0.            0.            0.     
+  current      99.5069f      99.5069f      99.5069f      99.5069f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vin12_0     0:vin13_0     0:vin14_0     0:vin15_0 
+  volts         0.            0.            0.            0.     
+  current      99.5069f      99.5069f      99.5069f      99.5069f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vin16_0     0:vin17_0     0:vin20_0     0:vin21_0 
+  volts         0.            0.            0.            0.     
+  current      99.5069f      99.5069f      99.5069f      99.5069f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vin22_0     0:vin23_0     0:vin24_0     0:vin25_0 
+  volts         0.            0.            0.            0.     
+  current      99.5069f      99.5069f      99.5069f      99.5069f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vin26_0     0:vin27_0     0:vin30_0     0:vin31_0 
+  volts         0.            0.            0.            0.     
+  current      99.5069f      99.5069f      99.5069f      99.5069f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vin32_0     0:vin33_0     0:vin34_0     0:vin35_0 
+  volts         0.            0.            0.            0.     
+  current      99.5069f      99.5069f      99.5069f      99.5069f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vin36_0     0:vin37_0     0:vpre00      0:vpre01  
+  volts         0.            0.            0.            0.     
+  current      99.5069f      99.5069f      57.4942f      57.4942f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vpre02      0:vpre03      0:vpre04      0:vpre05  
+  volts         0.            0.            0.            0.     
+  current      57.4942f      57.4942f      57.4942f      57.4942f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vpre06      0:vpre07      0:vpre10      0:vpre11  
+  volts         0.            0.            0.            0.     
+  current      57.4942f      57.4942f      57.4942f      57.4942f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vpre12      0:vpre13      0:vpre14      0:vpre15  
+  volts         0.            0.            0.            0.     
+  current      57.4942f      57.4942f      57.4942f      57.4942f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vpre16      0:vpre17      0:vpre20      0:vpre21  
+  volts         0.            0.            0.            0.     
+  current      57.4942f      57.4942f      57.4942f      57.4942f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vpre22      0:vpre23      0:vpre24      0:vpre25  
+  volts         0.            0.            0.            0.     
+  current      57.4942f      57.4942f      57.4942f      57.4942f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vpre26      0:vpre27      0:vpre30      0:vpre31  
+  volts         0.            0.            0.            0.     
+  current      57.4942f      57.4942f      57.4942f      57.4942f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vpre32      0:vpre33      0:vpre34      0:vpre35  
+  volts         0.            0.            0.            0.     
+  current      57.4942f      57.4942f      57.4942f      57.4942f
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vpre36      0:vpre37      0:vse         0:vss     
+  volts         0.            0.            0.            0.     
+  current      57.4942f      57.4942f     969.5691a      18.6611m
+  power         0.            0.            0.            0.     
+
+ subckt                                                          
+ element     0:vwe         0:vwl0        0:vwl1        0:vwl2    
+  volts         0.            0.            0.            0.     
+  current       3.5093f       5.9916f       5.9916f       5.9916f
+  power         0.            0.            0.            0.     
+
+ subckt                
+ element     0:vwl3    
+  volts         0.     
+  current       5.9916f
+  power         0.     
+
+     total voltage source power dissipation=   33.5899m       watts
+
+
+ ******
+ 
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ pwr=   2.2643m  from=  14.4500n     to=  35.0000n
+
+          ***** job concluded
+ ******  
+ 
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+ cpu MHz	: 2593.905
+ CPU(s)		: 9
+  
+ OS:
+ Linux version 4.18.0-553.16.1.el8_10.x86_64 (mockbuild@x86-64-01.build.eng.rdu2.redhat.com) (gcc version 8.5.0 20210514 (Red Hat 8.5.0-22) (GCC)) #1 SMP Thu Aug 1 04:16:12 EDT 2024
+
+ System loadavg : 3.92 4.32 5.14 4/3868 2692781
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     9
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =    1097 # elements   =    2277
+  # resistors   =       0 # capacitors =      32 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =     101
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =    2144 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.16           1          29
+  transient          5.26         351        2371         815 rev=        12
+  readin             0.04
+  errchk             0.12
+  setup              0.03
+  output             0.00
+
+
+           peak memory used        550.73 megabytes
+           total cpu time            5.61 seconds
+           total elapsed time        5.69 seconds
+           job started at     23:30:43 12/05/2024
+           job ended   at     23:30:48 12/05/2024
+           job total runtime         5.69 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.06(s)

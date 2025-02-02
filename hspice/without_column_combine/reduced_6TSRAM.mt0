@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='T-2022.06 linux64' PARAM_COUNT=0
+.TITLE ''
+ pwr              temper           alter#          
+  2.264e-03         25.0000        1               

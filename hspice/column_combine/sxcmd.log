@@ -1,0 +1,54 @@
+### Custom WaveView ADV log file, revision T-2022.06 (build May 21, ) ###
+### created at 21:26:26 on Thu Dec  5 2024 (Linux AMD64) ###
+### Host Name: caen-vnc-mi02.engin.umich.edu   User ID: mengshan   PID: 2609661   ###
+wv_start_log
+# (0) running in waveview only mode
+# (0) SW_SX_PERL_LIB defined
+# (0) SW_SX_TCL_LIB defined
+# (0) HOME defined
+sx_open_sim_file_read {reduced_6TSRAM.tr0}
+wv_move_window {Custom WaveView} {} 0 27
+wv_select_tree_item {Custom WaveView} {} {hierview} {D0:reduced_6TSRAM.tr0(0)} {0} {+sep=@}
+wv_expand_tree_item {Custom WaveView} {} {hierview} {D0:reduced_6TSRAM.tr0(0)} {+sep=@}
+wv_select_tree_item {Custom WaveView} {} {hierview} {D0:reduced_6TSRAM.tr0(0)} {0} {+sep=@}
+wv_select_tree_item {Custom WaveView} {} {hierview} {D0:reduced_6TSRAM.tr0(0)@toplevel(0)} {0} {+sep=@}
+wv_expand_tree_item {Custom WaveView} {} {hierview} {D0:reduced_6TSRAM.tr0(0)@toplevel(0)} {+sep=@}
+wv_select_tree_item {Custom WaveView} {} {hierview} {D0:reduced_6TSRAM.tr0(0)@toplevel(0)} {0} {+sep=@}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {198}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {396}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {594}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {792}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {990}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {1188}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {1386}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {1584}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {1782}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {1790}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {1592}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {1394}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {1196}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {998}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {800}
+wv_move_scrollbar {Custom WaveView} {} {sigview.HScrolBar} {602}
+wv_select_list_item {Custom WaveView} {} {sigview} {v(dout0)} 24
+wv_dclick_list_item {Custom WaveView} {} {sigview} {v(dout0)} 24
+wv_select_list_item {Custom WaveView} {} {sigview} {v(dout1)} 25
+wv_dclick_list_item {Custom WaveView} {} {sigview} {v(dout1)} 25
+wv_select_list_item {Custom WaveView} {} {sigview} {v(dout2)} 26
+wv_dclick_list_item {Custom WaveView} {} {sigview} {v(dout2)} 26
+wv_select_list_item {Custom WaveView} {} {sigview} {v(dout3)} 27
+wv_dclick_list_item {Custom WaveView} {} {sigview} {v(dout3)} 27
+wv_select_list_item {Custom WaveView} {} {sigview} {v(dout4)} 28
+wv_dclick_list_item {Custom WaveView} {} {sigview} {v(dout4)} 28
+wv_select_list_item {Custom WaveView} {} {sigview} {v(dout5)} 29
+wv_dclick_list_item {Custom WaveView} {} {sigview} {v(dout5)} 29
+wv_select_list_item {Custom WaveView} {} {sigview} {v(dout6)} 30
+wv_drag_list_item {Custom WaveView} {} {sigview} {v(dout6)} 30
+wv_dclick_list_item {Custom WaveView} {} {sigview} {v(dout6)} 30
+wv_select_list_item {Custom WaveView} {} {sigview} {v(dout7)} 31
+wv_dclick_list_item {Custom WaveView} {} {sigview} {v(dout7)} 31
+wv_close_window {Custom WaveView} 
+wv_move_window {Confirmation} {} 539 310
+wv_move_window {Confirmation} {} 549 314
+wv_select_dialog {Confirmation} 
+#wv_press_button {Confirmation} {} {Ok} 

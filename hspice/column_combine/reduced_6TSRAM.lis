@@ -1,0 +1,453 @@
+ ****** PrimeSim HSPICE -- T-2022.06 linux64 (May 20 2022 7637141) ******
+  Copyright (c) 1986 - 2024 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: reduced_6TSRAM.sp                                                 
+  Command line options: /usr/caen/hspice-2022.06/hspice/linux64/hspice -i reduced_6TSRAM.sp -o reduced_6TSRAM.lis
+  Start time: Thu Dec  5 21:51:25 2024
+ lic:  
+ lic: FLEXlm: SDK_12.10 
+ lic: USER:   mengshan             HOSTNAME: caen-vnc-mi02.engin.umich.edu 
+ lic: HOSTID: ffffffffd38d6204     PID:      2614518 
+ lic: Using FLEXlm license file: 
+ lic: /usr/caen/FLEXlm/data/license.dat.synopsys 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 30-apr-2025/2024.09 
+ lic: 1(in_use)/150(total) FLOATING license(s) on SERVER /usr/caen/FLEXlm/data/license.dat.synopsys 
+ lic:   
+  **warning** (reduced_6TSRAM.sp:13) Global net name "vdd" in subckt pin list. The pin will be connected to the local net. Recommend to not use global net names in subckt pin lists.
+1****** PrimeSim HSPICE -- T-2022.06 linux64 (May 20 2022 7637141) ******
+ ******  
+ 
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x_buff0.                        buffer             1.00 
+        2 x_buff1.                        buffer             1.00 
+        3 x_buff2.                        buffer             1.00 
+        4 x_buff3.                        buffer             1.00 
+        5 x_buff4.                        buffer             1.00 
+        6 x_buff5.                        buffer             1.00 
+        7 x_buff6.                        buffer             1.00 
+        8 x_buff7.                        buffer             1.00 
+        9 x_pre0.                         precharge          1.00 
+       10 x_pre1.                         precharge          1.00 
+       11 x_pre2.                         precharge          1.00 
+       12 x_pre3.                         precharge          1.00 
+       13 x_pre4.                         precharge          1.00 
+       14 x_pre5.                         precharge          1.00 
+       15 x_pre6.                         precharge          1.00 
+       16 x_pre7.                         precharge          1.00 
+       17 x_ram00.                        cell               1.00 
+       18 x_ram01.                        cell               1.00 
+       19 x_ram02.                        cell               1.00 
+       20 x_ram03.                        cell               1.00 
+       21 x_ram04.                        cell               1.00 
+       22 x_ram05.                        cell               1.00 
+       23 x_ram06.                        cell               1.00 
+       24 x_ram07.                        cell               1.00 
+       25 x_ram10.                        cell               1.00 
+       26 x_ram11.                        cell               1.00 
+       27 x_ram12.                        cell               1.00 
+       28 x_ram13.                        cell               1.00 
+       29 x_ram14.                        cell               1.00 
+       30 x_ram15.                        cell               1.00 
+       31 x_ram16.                        cell               1.00 
+       32 x_ram17.                        cell               1.00 
+       33 x_ram20.                        cell               1.00 
+       34 x_ram21.                        cell               1.00 
+       35 x_ram22.                        cell               1.00 
+       36 x_ram23.                        cell               1.00 
+       37 x_ram24.                        cell               1.00 
+       38 x_ram25.                        cell               1.00 
+       39 x_ram26.                        cell               1.00 
+       40 x_ram27.                        cell               1.00 
+       41 x_ram30.                        cell               1.00 
+       42 x_ram31.                        cell               1.00 
+       43 x_ram32.                        cell               1.00 
+       44 x_ram33.                        cell               1.00 
+       45 x_ram34.                        cell               1.00 
+       46 x_ram35.                        cell               1.00 
+       47 x_ram36.                        cell               1.00 
+       48 x_ram37.                        cell               1.00 
+       49 x_buff_nor00.                   inv_buf            1.00 
+       50 x_buff_nor01.                   inv_buf            1.00 
+       51 x_buff_nor02.                   inv_buf            1.00 
+       52 x_buff_nor03.                   inv_buf            1.00 
+       53 x_buff_nor04.                   inv_buf            1.00 
+       54 x_buff_nor05.                   inv_buf            1.00 
+       55 x_buff_nor06.                   inv_buf            1.00 
+       56 x_buff_nor07.                   inv_buf            1.00 
+       57 x_buff_nor10.                   inv_buf            1.00 
+       58 x_buff_nor11.                   inv_buf            1.00 
+       59 x_buff_nor12.                   inv_buf            1.00 
+       60 x_buff_nor13.                   inv_buf            1.00 
+       61 x_buff_nor14.                   inv_buf            1.00 
+       62 x_buff_nor15.                   inv_buf            1.00 
+       63 x_buff_nor16.                   inv_buf            1.00 
+       64 x_buff_nor17.                   inv_buf            1.00 
+       65 x_buff_nor20.                   inv_buf            1.00 
+       66 x_buff_nor21.                   inv_buf            1.00 
+       67 x_buff_nor22.                   inv_buf            1.00 
+       68 x_buff_nor23.                   inv_buf            1.00 
+       69 x_buff_nor24.                   inv_buf            1.00 
+       70 x_buff_nor25.                   inv_buf            1.00 
+       71 x_buff_nor26.                   inv_buf            1.00 
+       72 x_buff_nor27.                   inv_buf            1.00 
+       73 x_buff_nor30.                   inv_buf            1.00 
+       74 x_buff_nor31.                   inv_buf            1.00 
+       75 x_buff_nor32.                   inv_buf            1.00 
+       76 x_buff_nor33.                   inv_buf            1.00 
+       77 x_buff_nor34.                   inv_buf            1.00 
+       78 x_buff_nor35.                   inv_buf            1.00 
+       79 x_buff_nor36.                   inv_buf            1.00 
+       80 x_buff_nor37.                   inv_buf            1.00 
+       81 x_nor00.                        nor                1.00 
+       82 x_nor01.                        nor                1.00 
+       83 x_nor02.                        nor                1.00 
+       84 x_nor03.                        nor                1.00 
+       85 x_nor04.                        nor                1.00 
+       86 x_nor05.                        nor                1.00 
+       87 x_nor06.                        nor                1.00 
+       88 x_nor07.                        nor                1.00 
+       89 x_nor10.                        nor                1.00 
+       90 x_nor11.                        nor                1.00 
+       91 x_nor12.                        nor                1.00 
+       92 x_nor13.                        nor                1.00 
+       93 x_nor14.                        nor                1.00 
+       94 x_nor15.                        nor                1.00 
+       95 x_nor16.                        nor                1.00 
+       96 x_nor17.                        nor                1.00 
+       97 x_nor20.                        nor                1.00 
+       98 x_nor21.                        nor                1.00 
+       99 x_nor22.                        nor                1.00 
+      100 x_nor23.                        nor                1.00 
+      101 x_nor24.                        nor                1.00 
+      102 x_nor25.                        nor                1.00 
+      103 x_nor26.                        nor                1.00 
+      104 x_nor27.                        nor                1.00 
+      105 x_nor30.                        nor                1.00 
+      106 x_nor31.                        nor                1.00 
+      107 x_nor32.                        nor                1.00 
+      108 x_nor33.                        nor                1.00 
+      109 x_nor34.                        nor                1.00 
+      110 x_nor35.                        nor                1.00 
+      111 x_nor36.                        nor                1.00 
+      112 x_nor37.                        nor                1.00 
+      113 x_write0.                       write              1.00 
+      114 x_write1.                       write              1.00 
+      115 x_write2.                       write              1.00 
+      116 x_write3.                       write              1.00 
+      117 x_write4.                       write              1.00 
+      118 x_write5.                       write              1.00 
+      119 x_write6.                       write              1.00 
+      120 x_write7.                       write              1.00 
+      121 x_sa0.                          sa                 1.00 
+      122 x_sa1.                          sa                 1.00 
+      123 x_sa2.                          sa                 1.00 
+      124 x_sa3.                          sa                 1.00 
+      125 x_sa4.                          sa                 1.00 
+      126 x_sa5.                          sa                 1.00 
+      127 x_sa6.                          sa                 1.00 
+      128 x_sa7.                          sa                 1.00 
+      129 x_buff0.xinv1.                  inv_buf            1.00 
+      130 x_buff0.xinv2.                  inv_buf            1.00 
+      131 x_buff1.xinv1.                  inv_buf            1.00 
+      132 x_buff1.xinv2.                  inv_buf            1.00 
+      133 x_buff2.xinv1.                  inv_buf            1.00 
+      134 x_buff2.xinv2.                  inv_buf            1.00 
+      135 x_buff3.xinv1.                  inv_buf            1.00 
+      136 x_buff3.xinv2.                  inv_buf            1.00 
+      137 x_buff4.xinv1.                  inv_buf            1.00 
+      138 x_buff4.xinv2.                  inv_buf            1.00 
+      139 x_buff5.xinv1.                  inv_buf            1.00 
+      140 x_buff5.xinv2.                  inv_buf            1.00 
+      141 x_buff6.xinv1.                  inv_buf            1.00 
+      142 x_buff6.xinv2.                  inv_buf            1.00 
+      143 x_buff7.xinv1.                  inv_buf            1.00 
+      144 x_buff7.xinv2.                  inv_buf            1.00 
+      545 x_write0.x1.                    inv                1.00 
+      550 x_write1.x1.                    inv                1.00 
+      555 x_write2.x1.                    inv                1.00 
+      560 x_write3.x1.                    inv                1.00 
+      565 x_write4.x1.                    inv                1.00 
+      570 x_write5.x1.                    inv                1.00 
+      575 x_write6.x1.                    inv                1.00 
+      580 x_write7.x1.                    inv                1.00 
+      585 x_sa0.x1.                       inv                1.00 
+      591 x_sa1.x1.                       inv                1.00 
+      597 x_sa2.x1.                       inv                1.00 
+      603 x_sa3.x1.                       inv                1.00 
+      609 x_sa4.x1.                       inv                1.00 
+      615 x_sa5.x1.                       inv                1.00 
+      621 x_sa6.x1.                       inv                1.00 
+      627 x_sa7.x1.                       inv                1.00 
+  **info** (reduced_6TSRAM.sp:263) DC voltage reset to initial transient source value in source 0:vd00. new dc=0.0000D+00
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+  Opening plot unit= 15
+ file=reduced_6TSRAM.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+      node    =voltage        node    =voltage        node    =voltage
+
+ +  0:bl0     =   1.8000    0:bl1     =   1.8000    0:bl2     =   1.8000 
+ +  0:bl3     =   1.8000    0:bl4     =   1.8000    0:bl5     =   1.8000 
+ +  0:bl6     =   1.8000    0:bl7     =   1.8000    0:blb0    =   1.8000 
+ +  0:blb1    =   1.8000    0:blb2    =   1.8000    0:blb3    =   1.8000 
+ +  0:blb4    =   1.8000    0:blb5    =   1.8000    0:blb6    =   1.8000 
+ +  0:blb7    =   1.8000    0:d0      =   3.7264n   0:d0_pre  =   0.     
+ +  0:d1      =   3.7264n   0:d1_pre  =   0.        0:d2      =   3.7264n
+ +  0:d2_pre  =   0.        0:d3      =   3.7264n   0:d3_pre  =   0.     
+ +  0:d4      =   3.7264n   0:d4_pre  =   0.        0:d5      =   3.7264n
+ +  0:d5_pre  =   0.        0:d6      =   3.7264n   0:d6_pre  =   0.     
+ +  0:d7      =   3.7264n   0:d7_pre  =   0.        0:dout0   =  96.5767n
+ +  0:dout1   =  96.5767n   0:dout2   =  96.5767n   0:dout3   =  96.5767n
+ +  0:dout4   =  96.5767n   0:dout5   =  96.5767n   0:dout6   =  96.5767n
+ +  0:dout7   =  96.5767n   0:in00_0  =   0.        0:in01_0  =   0.     
+ +  0:in02_0  =   0.        0:in03_0  =   0.        0:in04_0  =   0.     
+ +  0:in05_0  =   0.        0:in06_0  =   0.        0:in07_0  =   0.     
+ +  0:in10_0  =   0.        0:in11_0  =   0.        0:in12_0  =   0.     
+ +  0:in13_0  =   0.        0:in14_0  =   0.        0:in15_0  =   0.     
+ +  0:in16_0  =   0.        0:in17_0  =   0.        0:in20_0  =   0.     
+ +  0:in21_0  =   0.        0:in22_0  =   0.        0:in23_0  =   0.     
+ +  0:in24_0  =   0.        0:in25_0  =   0.        0:in26_0  =   0.     
+ +  0:in27_0  =   0.        0:in30_0  =   0.        0:in31_0  =   0.     
+ +  0:in32_0  =   0.        0:in33_0  =   0.        0:in34_0  =   0.     
+ +  0:in35_0  =   0.        0:in36_0  =   0.        0:in37_0  =   0.     
+ +  0:in_b00  =   1.8000    0:in_b01  =   1.8000    0:in_b02  =   1.8000 
+ +  0:in_b03  =   1.8000    0:in_b04  =   1.8000    0:in_b05  =   1.8000 
+ +  0:in_b06  =   1.8000    0:in_b07  =   1.8000    0:in_b10  =   1.8000 
+ +  0:in_b11  =   1.8000    0:in_b12  =   1.8000    0:in_b13  =   1.8000 
+ +  0:in_b14  =   1.8000    0:in_b15  =   1.8000    0:in_b16  =   1.8000 
+ +  0:in_b17  =   1.8000    0:in_b20  =   1.8000    0:in_b21  =   1.8000 
+ +  0:in_b22  =   1.8000    0:in_b23  =   1.8000    0:in_b24  =   1.8000 
+ +  0:in_b25  =   1.8000    0:in_b26  =   1.8000    0:in_b27  =   1.8000 
+ +  0:in_b30  =   1.8000    0:in_b31  =   1.8000    0:in_b32  =   1.8000 
+ +  0:in_b33  =   1.8000    0:in_b34  =   1.8000    0:in_b35  =   1.8000 
+ +  0:in_b36  =   1.8000    0:in_b37  =   1.8000    0:out00   =   6.0561n
+ +  0:out01   =   6.0561n   0:out02   =   6.0561n   0:out03   =   6.0561n
+ +  0:out04   =   6.0561n   0:out05   =   6.0561n   0:out06   =   6.0561n
+ +  0:out07   =   6.0561n   0:out10   =   6.0561n   0:out11   =   6.0561n
+ +  0:out12   =   6.0561n   0:out13   =   6.0561n   0:out14   =   6.0561n
+ +  0:out15   =   6.0561n   0:out16   =   6.0561n   0:out17   =   6.0561n
+ +  0:out20   =   6.0561n   0:out21   =   6.0561n   0:out22   =   6.0561n
+ +  0:out23   =   6.0561n   0:out24   =   6.0561n   0:out25   =   6.0561n
+ +  0:out26   =   6.0561n   0:out27   =   6.0561n   0:out30   =   6.0561n
+ +  0:out31   =   6.0561n   0:out32   =   6.0561n   0:out33   =   6.0561n
+ +  0:out34   =   6.0561n   0:out35   =   6.0561n   0:out36   =   6.0561n
+ +  0:out37   =   6.0561n   0:pre0    =   0.        0:pre1    =   0.     
+ +  0:pre2    =   0.        0:pre3    =   0.        0:pre4    =   0.     
+ +  0:pre5    =   0.        0:pre6    =   0.        0:pre7    =   0.     
+ +  0:q00     = 715.3101m   0:q01     = 715.3101m   0:q02     = 715.3101m
+ +  0:q03     = 715.3101m   0:q04     = 715.3101m   0:q05     = 715.3101m
+ +  0:q06     = 715.3101m   0:q07     = 715.3101m   0:q10     = 715.3101m
+ +  0:q11     = 715.3101m   0:q12     = 715.3101m   0:q13     = 715.3101m
+ +  0:q14     = 715.3101m   0:q15     = 715.3101m   0:q16     = 715.3101m
+ +  0:q17     = 715.3101m   0:q20     = 715.3101m   0:q21     = 715.3101m
+ +  0:q22     = 715.3101m   0:q23     = 715.3101m   0:q24     = 715.3101m
+ +  0:q25     = 715.3101m   0:q26     = 715.3101m   0:q27     = 715.3101m
+ +  0:q30     = 715.3101m   0:q31     = 715.3101m   0:q32     = 715.3101m
+ +  0:q33     = 715.3101m   0:q34     = 715.3101m   0:q35     = 715.3101m
+ +  0:q36     = 715.3101m   0:q37     = 715.3101m   0:qb00    = 715.3101m
+ +  0:qb01    = 715.3101m   0:qb02    = 715.3101m   0:qb03    = 715.3101m
+ +  0:qb04    = 715.3101m   0:qb05    = 715.3101m   0:qb06    = 715.3101m
+ +  0:qb07    = 715.3101m   0:qb10    = 715.3101m   0:qb11    = 715.3101m
+ +  0:qb12    = 715.3101m   0:qb13    = 715.3101m   0:qb14    = 715.3101m
+ +  0:qb15    = 715.3101m   0:qb16    = 715.3101m   0:qb17    = 715.3101m
+ +  0:qb20    = 715.3101m   0:qb21    = 715.3101m   0:qb22    = 715.3101m
+ +  0:qb23    = 715.3101m   0:qb24    = 715.3101m   0:qb25    = 715.3101m
+ +  0:qb26    = 715.3101m   0:qb27    = 715.3101m   0:qb30    = 715.3101m
+ +  0:qb31    = 715.3101m   0:qb32    = 715.3101m   0:qb33    = 715.3101m
+ +  0:qb34    = 715.3101m   0:qb35    = 715.3101m   0:qb36    = 715.3101m
+ +  0:qb37    = 715.3101m   0:se      =   0.        0:vdd     =   1.8000 
+ +  0:vss     =   0.        0:we      =   0.        0:wl0     =   0.     
+ +  0:wl1     =   0.        0:wl2     =   0.        0:wl3     =   0.     
+ +  1:tmp     =   1.8000    2:tmp     =   1.8000    3:tmp     =   1.8000 
+ +  4:tmp     =   1.8000    5:tmp     =   1.8000    6:tmp     =   1.8000 
+ +  7:tmp     =   1.8000    8:tmp     =   1.8000   81:n1      =   1.8000 
+ + 82:n1      =   1.8000   83:n1      =   1.8000   84:n1      =   1.8000 
+ + 85:n1      =   1.8000   86:n1      =   1.8000   87:n1      =   1.8000 
+ + 88:n1      =   1.8000   89:n1      =   1.8000   90:n1      =   1.8000 
+ + 91:n1      =   1.8000   92:n1      =   1.8000   93:n1      =   1.8000 
+ + 94:n1      =   1.8000   95:n1      =   1.8000   96:n1      =   1.8000 
+ + 97:n1      =   1.8000   98:n1      =   1.8000   99:n1      =   1.8000 
+ +100:n1      =   1.8000  101:n1      =   1.8000  102:n1      =   1.8000 
+ +103:n1      =   1.8000  104:n1      =   1.8000  105:n1      =   1.8000 
+ +106:n1      =   1.8000  107:n1      =   1.8000  108:n1      =   1.8000 
+ +109:n1      =   1.8000  110:n1      =   1.8000  111:n1      =   1.8000 
+ +112:n1      =   1.8000  113:1       =  64.7037m 113:2       =  36.7818n
+ +113:in1     =   1.8000  114:1       =  64.7037m 114:2       =  36.7818n
+ +114:in1     =   1.8000  115:1       =  64.7037m 115:2       =  36.7818n
+ +115:in1     =   1.8000  116:1       =  64.7037m 116:2       =  36.7818n
+ +116:in1     =   1.8000  117:1       =  64.7037m 117:2       =  36.7818n
+ +117:in1     =   1.8000  118:1       =  64.7037m 118:2       =  36.7818n
+ +118:in1     =   1.8000  119:1       =  64.7037m 119:2       =  36.7818n
+ +119:in1     =   1.8000  120:1       =  64.7037m 120:2       =  36.7818n
+ +120:in1     =   1.8000  121:n1      =   1.6989  121:n2      =   1.6121 
+ +121:y       =   1.6988  122:n1      =   1.6989  122:n2      =   1.6121 
+ +122:y       =   1.6988  123:n1      =   1.6989  123:n2      =   1.6121 
+ +123:y       =   1.6988  124:n1      =   1.6989  124:n2      =   1.6121 
+ +124:y       =   1.6988  125:n1      =   1.6989  125:n2      =   1.6121 
+ +125:y       =   1.6988  126:n1      =   1.6989  126:n2      =   1.6121 
+ +126:y       =   1.6988  127:n1      =   1.6989  127:n2      =   1.6121 
+ +127:y       =   1.6988  128:n1      =   1.6989  128:n2      =   1.6121 
+ +128:y       =   1.6988 
+
+
+ **** voltage sources
+
+ subckt                                                                   
+ element    0:vd00       0:vd01       0:vd02       0:vd03       0:vd04    
+  volts        0.           0.           0.           0.           0.     
+  current     24.8767f     24.8767f     24.8767f     24.8767f     24.8767f
+  power        0.           0.           0.           0.           0.     
+
+ subckt                                                                   
+ element    0:vd05       0:vd06       0:vd07       0:vdd        0:vin00_0 
+  volts        0.           0.           0.           1.8000       0.     
+  current     24.8767f     24.8767f     24.8767f     -4.6653m     24.8767f
+  power        0.           0.           0.           8.3975m      0.     
+
+ subckt                                                                   
+ element    0:vin01_0    0:vin02_0    0:vin03_0    0:vin04_0    0:vin05_0 
+  volts        0.           0.           0.           0.           0.     
+  current     24.8767f     24.8767f     24.8767f     24.8767f     24.8767f
+  power        0.           0.           0.           0.           0.     
+
+ subckt                                                                   
+ element    0:vin06_0    0:vin07_0    0:vin10_0    0:vin11_0    0:vin12_0 
+  volts        0.           0.           0.           0.           0.     
+  current     24.8767f     24.8767f     24.8767f     24.8767f     24.8767f
+  power        0.           0.           0.           0.           0.     
+
+ subckt                                                                   
+ element    0:vin13_0    0:vin14_0    0:vin15_0    0:vin16_0    0:vin17_0 
+  volts        0.           0.           0.           0.           0.     
+  current     24.8767f     24.8767f     24.8767f     24.8767f     24.8767f
+  power        0.           0.           0.           0.           0.     
+
+ subckt                                                                   
+ element    0:vin20_0    0:vin21_0    0:vin22_0    0:vin23_0    0:vin24_0 
+  volts        0.           0.           0.           0.           0.     
+  current     24.8767f     24.8767f     24.8767f     24.8767f     24.8767f
+  power        0.           0.           0.           0.           0.     
+
+ subckt                                                                   
+ element    0:vin25_0    0:vin26_0    0:vin27_0    0:vin30_0    0:vin31_0 
+  volts        0.           0.           0.           0.           0.     
+  current     24.8767f     24.8767f     24.8767f     24.8767f     24.8767f
+  power        0.           0.           0.           0.           0.     
+
+ subckt                                                                   
+ element    0:vin32_0    0:vin33_0    0:vin34_0    0:vin35_0    0:vin36_0 
+  volts        0.           0.           0.           0.           0.     
+  current     24.8767f     24.8767f     24.8767f     24.8767f     24.8767f
+  power        0.           0.           0.           0.           0.     
+
+ subckt                                                                   
+ element    0:vin37_0    0:vpre00     0:vpre01     0:vpre02     0:vpre03  
+  volts        0.           0.           0.           0.           0.     
+  current     24.8767f     57.4942f     57.4942f     57.4942f     57.4942f
+  power        0.           0.           0.           0.           0.     
+
+ subckt                                                                   
+ element    0:vpre04     0:vpre05     0:vpre06     0:vpre07     0:vse     
+  volts        0.           0.           0.           0.           0.     
+  current     57.4942f     57.4942f     57.4942f     57.4942f    242.3923a
+  power        0.           0.           0.           0.           0.     
+
+ subckt                                                                   
+ element    0:vss        0:vwe        0:vwl0       0:vwl1       0:vwl2    
+  volts        0.           0.           0.           0.           0.     
+  current      4.6653m    877.3214a      1.4979f      1.4979f      1.4979f
+  power        0.           0.           0.           0.           0.     
+
+ subckt               
+ element    0:vwl3    
+  volts        0.     
+  current      1.4979f
+  power        0.     
+
+     total voltage source power dissipation=    8.3975m       watts
+
+
+ ******
+ 
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ pwr= 228.7380u  from=  14.4500n     to=  35.0000n
+
+          ***** job concluded
+ ******  
+ 
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+ cpu MHz	: 2593.905
+ CPU(s)		: 9
+  
+ OS:
+ Linux version 4.18.0-553.16.1.el8_10.x86_64 (mockbuild@x86-64-01.build.eng.rdu2.redhat.com) (gcc version 8.5.0 20210514 (Red Hat 8.5.0-22) (GCC)) #1 SMP Thu Aug 1 04:16:12 EDT 2024
+
+ System loadavg : 2.77 3.03 3.28 2/2949 2614540
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     9
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =     305 # elements   =     600
+  # resistors   =       0 # capacitors =       8 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =      56
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =     536 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.04           1          19
+  transient          1.90         351        3366        1152 rev=       141
+  readin             0.03
+  errchk             0.03
+  setup              0.02
+  output             0.00
+
+
+           peak memory used        531.51 megabytes
+           total cpu time            2.04 seconds
+           total elapsed time        2.16 seconds
+           job started at     21:51:25 12/05/2024
+           job ended   at     21:51:27 12/05/2024
+           job total runtime         2.16 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.09(s)
