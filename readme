@@ -1,0 +1,42 @@
+To use this PDK, run the following line in your shell:
+When entering each file, please enter "module load eecs598-002/f23" first
+
+* SRAM_CIM foler:
+
+This directory contains files and scripts to simulate the complete SRAM-based Compute-in-Memory (CIM) macro. The generated waveforms would resemble the one provided in our report.
+
+To run the provided Makefile, use:
+
+1. make syn: Synthesizes the circuit (SRAM_CIM_unsigned.sv in the src directory).
+2. make dve_syn: Performs post-synthesis simulation.
+3. make clean: Cleans up all generated files.
+
+* CIM_without_column_combine & CIM_column_combine folder:
+
+These directories are used to estimate the power and area of the CIM macro, excluding the SRAM array. They contain the necessary files and scripts to simulate the adder trees and accumulators. The key difference between the two directories is the number of output columns—one is configured for column combining, while the other is not.
+
+To run the provided Makefile, use:
+
+1. make syn: Synthesizes the circuit (SRAM_CIM_unsigned.sv in the src directory).
+2. make dve_syn: Performs post-synthesis simulation.
+3. make clean: Cleans up all generated files.
+
+After running synthesis and post-syn, entering to the power folder to run PTPX (use "make pp"). The resulting power and area reports will be generated in: power/power.rpt, reports/*.power.rpt, and reports/*.area.rpt. 
+
+* hspice folder:
+This directory contains two subdirectories:
+- With Column Combine: SRAM array designed to combine columns.
+- Without Column Combine: SRAM array without column combining.
+
+Each subdirectory contains a .sp file representing the transistor-level schematic.
+
+Running HSPICE Simulations
+Before running any HSPICE commands, load the HSPICE module: module load hspice
+
+Then, enter into the desired directory and run: hspice -i reduced_6TSRAM.sp -o reduced_6TSRAM.lis
+
+This will perform a transistor-level simulation and produce output files that can be used to measure power consumption.
+
+* column_combine
+
+For column combine, sparse_matrix.m will generate random weight matrix with certain level of sparsity. Change the matrix value in column_combine.cpp will get the combined matrix. By changing the value of matrix before and after column combine in column_expanding_alogorithm_tensorflow_maxpooling.py, the restore matrix will be generate. Input the value in expand_accuracy.m the accuracy will be calculated.
